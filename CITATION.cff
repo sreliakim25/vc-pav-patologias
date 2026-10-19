@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "Se usar este projeto, cite-o conforme abaixo."
+title: "Patologias em Pavimento de Peças: detecção, medição e classificação de severidade em pavimentos intertravados e de paralelepípedo com visão computacional"
+type: software
+authors:
+  - family-names: Rocha
+    given-names: Eliakim
+license: Apache-2.0
+repository-code: "https://github.com/SEU-USUARIO/patologias-pavimento-pecas"
+date-released: 2026-10-19
+version: 0.1.0
+keywords:
+  - visão computacional
+  - pavimento intertravado
+  - paralelepípedo
+  - patologias de pavimento
+  - segmentação de instâncias
+  - gêmeo digital
+references:
+  - type: article
+    authors:
+      - family-names: Freitas
+        given-names: Gabriel Tavares de Melo
+      - family-names: Nobre Júnior
+        given-names: Ernesto Ferreira
+      - family-names: Espindola
+        given-names: Aline Calheiros
+    title: "Avaliação da detecção automatizada de defeitos em pavimentos com YOLOv3: impacto das técnicas de coleta"
+    journal: Transportes
+    volume: 32
+    issue: 2
+    year: 2024
+    doi: 10.58922/transportes.v32i2.2796

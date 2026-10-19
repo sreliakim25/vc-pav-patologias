@@ -1,0 +1,3 @@
+# Rascunhos do artigo
+
+Um arquivo por seção, com o mesmo número da [estrutura do artigo](../estrutura-artigo.md): `01-introducao.md`, `02-revisao.md`, `03-metodo.md`...

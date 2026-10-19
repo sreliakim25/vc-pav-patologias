@@ -1,0 +1,18 @@
+{
+  "versao": "v1",
+  "classes": [
+    { "id": 0, "codigo": "afundamento", "nome": "Afundamento ou recalque", "prompts_sam3": ["sunken paving blocks", "depression in pavement", "settled pavers"] },
+    { "id": 1, "codigo": "peca_faltante", "nome": "Peça faltante ou solta", "prompts_sam3": ["missing paver", "missing paving stone", "hole in block pavement"] },
+    { "id": 2, "codigo": "peca_quebrada", "nome": "Peça quebrada", "prompts_sam3": ["broken concrete block", "cracked paver"] },
+    { "id": 3, "codigo": "junta_aberta", "nome": "Junta aberta ou perda de areia/rejunte", "prompts_sam3": ["open joints between pavers", "missing joint sand"] },
+    { "id": 4, "codigo": "desconfinamento", "nome": "Desconfinamento de borda", "prompts_sam3": ["displaced pavers near curb", "loose edge pavers"] },
+    { "id": 5, "codigo": "desnivel", "nome": "Desnível entre peças", "prompts_sam3": ["uneven paving blocks", "raised paver"] },
+    { "id": 6, "codigo": "remendo", "nome": "Remendo com outro material", "prompts_sam3": ["asphalt patch on pavers", "concrete patch on cobblestone"] },
+    { "id": 7, "codigo": "vegetacao", "nome": "Vegetação na junta", "prompts_sam3": ["weeds between stones", "grass growing in pavement joints"] }
+  ],
+  "grade": [
+    { "id": 0, "codigo": "fundo" },
+    { "id": 1, "codigo": "junta" },
+    { "id": 2, "codigo": "peca" }
+  ]
+}

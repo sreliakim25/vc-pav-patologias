@@ -1,0 +1,1329 @@
+{
+  "projeto": {
+    "nome": "Patologias em Pavimento de Peças",
+    "fase_atual": 0,
+    "atualizado_em": "2026-10-19",
+    "inicio": "2026-10-20"
+  },
+  "colunas": [
+    {
+      "id": "backlog",
+      "nome": "Backlog"
+    },
+    {
+      "id": "a_fazer",
+      "nome": "A fazer"
+    },
+    {
+      "id": "fazendo",
+      "nome": "Fazendo"
+    },
+    {
+      "id": "revisao",
+      "nome": "Revisão"
+    },
+    {
+      "id": "feito",
+      "nome": "Feito"
+    }
+  ],
+  "fases": [
+    {
+      "id": 0,
+      "nome": "Preparação",
+      "status": "em_andamento",
+      "inicio_previsto": "2026-10-20",
+      "fim_previsto": "2026-11-02",
+      "inicio_real": "2026-10-19",
+      "fim_real": null,
+      "documento": "docs/fases/fase-0-preparacao.md",
+      "subagente": "coleta-campo",
+      "portao": [
+        {
+          "item": "Teste de 10 minutos com junta visível e GPS gravado",
+          "ok": false
+        },
+        {
+          "item": "Guia de rotulagem v1 publicado",
+          "ok": false
+        },
+        {
+          "item": "4 ruas registradas no kanban",
+          "ok": false
+        },
+        {
+          "item": "Autorização obtida",
+          "ok": false
+        },
+        {
+          "item": "Supabase com RLS e sem alertas críticos",
+          "ok": false
+        }
+      ],
+      "indicadores": [
+        {
+          "nome": "Ruas definidas",
+          "atual": 0,
+          "meta": 4,
+          "unidade": "ruas",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Itens do kit prontos",
+          "atual": 0,
+          "meta": 100,
+          "unidade": "%",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Teste de câmera aprovado",
+          "atual": false,
+          "meta": true,
+          "unidade": "",
+          "sentido": "sim_nao"
+        },
+        {
+          "nome": "Testes de RLS aprovados (local)",
+          "atual": 12,
+          "meta": 12,
+          "unidade": "testes",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Alertas críticos no Security Advisor",
+          "atual": null,
+          "meta": 0,
+          "unidade": "alertas",
+          "sentido": "menor"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "nome": "Filmagens e vistoria",
+      "status": "pendente",
+      "inicio_previsto": "2026-11-03",
+      "fim_previsto": "2026-11-23",
+      "inicio_real": null,
+      "fim_real": null,
+      "documento": "docs/fases/fase-1-filmagens-vistoria.md",
+      "subagente": "coleta-campo",
+      "portao": [
+        {
+          "item": "800 imagens úteis com todas as classes principais",
+          "ok": false
+        },
+        {
+          "item": "50 defeitos medidos em campo",
+          "ok": false
+        },
+        {
+          "item": "10 defeitos com dupla avaliação",
+          "ok": false
+        },
+        {
+          "item": "Referência de escala por rua",
+          "ok": false
+        },
+        {
+          "item": "Nenhum rosto ou placa legível",
+          "ok": false
+        }
+      ],
+      "indicadores": [
+        {
+          "nome": "Imagens úteis",
+          "atual": 0,
+          "meta": 800,
+          "unidade": "imagens",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Defeitos medidos em campo",
+          "atual": 0,
+          "meta": 50,
+          "unidade": "defeitos",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Defeitos com dupla avaliação",
+          "atual": 0,
+          "meta": 10,
+          "unidade": "defeitos",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Ruas cobertas em C1",
+          "atual": 0,
+          "meta": 4,
+          "unidade": "ruas",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Ruas cobertas em C2",
+          "atual": 0,
+          "meta": 4,
+          "unidade": "ruas",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Descarte por nitidez",
+          "atual": null,
+          "meta": 30,
+          "unidade": "%",
+          "sentido": "menor"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Rotulagem e dataset v1",
+      "status": "pendente",
+      "inicio_previsto": "2026-11-24",
+      "fim_previsto": "2026-12-21",
+      "inicio_real": null,
+      "fim_real": null,
+      "documento": "docs/fases/fase-2-rotulagem-dataset.md",
+      "subagente": "rotulagem-dataset",
+      "portao": [
+        {
+          "item": "200 ou mais instâncias por classe principal",
+          "ok": false
+        },
+        {
+          "item": "Grade rotulada em 150 imagens",
+          "ok": false
+        },
+        {
+          "item": "IoU entre rotuladores de 0,60 ou mais",
+          "ok": false
+        },
+        {
+          "item": "Divisão por rua e teste congelado",
+          "ok": false
+        },
+        {
+          "item": "Classes raras marcadas para coleta dirigida",
+          "ok": false
+        }
+      ],
+      "indicadores": [
+        {
+          "nome": "Imagens rotuladas",
+          "atual": 0,
+          "meta": 800,
+          "unidade": "imagens",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Instâncias na classe principal mais fraca",
+          "atual": 0,
+          "meta": 200,
+          "unidade": "instâncias",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Imagens com grade rotulada",
+          "atual": 0,
+          "meta": 150,
+          "unidade": "imagens",
+          "sentido": "maior"
+        },
+        {
+          "nome": "IoU entre rotuladores",
+          "atual": null,
+          "meta": 0.6,
+          "unidade": "",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Imagens sem defeito",
+          "atual": null,
+          "meta": 25,
+          "unidade": "%",
+          "sentido": "maior"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Treino",
+      "status": "pendente",
+      "inicio_previsto": "2026-12-22",
+      "fim_previsto": "2027-01-18",
+      "inicio_real": null,
+      "fim_real": null,
+      "documento": "docs/fases/fase-3-treino.md",
+      "subagente": "treino-modelos",
+      "portao": [
+        {
+          "item": "mAP50 de 0,70 ou mais no teste (C1)",
+          "ok": false
+        },
+        {
+          "item": "Cantos das peças em 80% dos quadros",
+          "ok": false
+        },
+        {
+          "item": "Tabela de experimentos completa",
+          "ok": false
+        }
+      ],
+      "indicadores": [
+        {
+          "nome": "mAP50 no teste (C1)",
+          "atual": null,
+          "meta": 0.7,
+          "unidade": "",
+          "sentido": "maior"
+        },
+        {
+          "nome": "IoU da classe junta",
+          "atual": null,
+          "meta": 0.6,
+          "unidade": "",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Quadros com cantos encontrados",
+          "atual": null,
+          "meta": 80,
+          "unidade": "%",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Experimentos registrados",
+          "atual": 0,
+          "meta": 6,
+          "unidade": "experimentos",
+          "sentido": "maior"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Pós-treino",
+      "status": "pendente",
+      "inicio_previsto": "2027-01-19",
+      "fim_previsto": "2027-02-15",
+      "inicio_real": null,
+      "fim_real": null,
+      "documento": "docs/fases/fase-4-pos-treino.md",
+      "subagente": "pos-treino-medicao",
+      "portao": [
+        {
+          "item": "Erro médio de área abaixo de 20% (C1)",
+          "ok": false
+        },
+        {
+          "item": "Peças afetadas: 60% exata, 90% até 1",
+          "ok": false
+        },
+        {
+          "item": "Kappa de severidade perto do humano",
+          "ok": false
+        },
+        {
+          "item": "Pipeline de ponta a ponta numa passada nova",
+          "ok": false
+        }
+      ],
+      "indicadores": [
+        {
+          "nome": "Erro médio de área (C1)",
+          "atual": null,
+          "meta": 20,
+          "unidade": "%",
+          "sentido": "menor"
+        },
+        {
+          "nome": "Peças afetadas: acerto exato",
+          "atual": null,
+          "meta": 60,
+          "unidade": "%",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Peças afetadas: erro de até 1",
+          "atual": null,
+          "meta": 90,
+          "unidade": "%",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Kappa sistema x avaliador",
+          "atual": null,
+          "meta": 0.6,
+          "unidade": "",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Quadros com escala confiável",
+          "atual": null,
+          "meta": 80,
+          "unidade": "%",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Recall no limiar escolhido",
+          "atual": null,
+          "meta": 0.85,
+          "unidade": "",
+          "sentido": "maior"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "nome": "Piloto em obra real",
+      "status": "pendente",
+      "inicio_previsto": "2027-02-16",
+      "fim_previsto": "2027-04-12",
+      "inicio_real": null,
+      "fim_real": null,
+      "documento": "docs/fases/fase-5-piloto-obra.md",
+      "subagente": "piloto-painel",
+      "portao": [
+        {
+          "item": "Engenheiro usa o painel na rotina",
+          "ok": false
+        },
+        {
+          "item": "Taxa de descarte caindo semana a semana",
+          "ok": false
+        },
+        {
+          "item": "1 caso encontrado antes da vistoria manual",
+          "ok": false
+        },
+        {
+          "item": "Sem incidentes e Security Advisor limpo",
+          "ok": false
+        }
+      ],
+      "indicadores": [
+        {
+          "nome": "Passadas semanais feitas",
+          "atual": 0,
+          "meta": 8,
+          "unidade": "passadas",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Taxa de descarte",
+          "atual": null,
+          "meta": 20,
+          "unidade": "%",
+          "sentido": "menor"
+        },
+        {
+          "nome": "Casos antes da vistoria manual",
+          "atual": 0,
+          "meta": 1,
+          "unidade": "casos",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Alertas críticos no Security Advisor",
+          "atual": null,
+          "meta": 0,
+          "unidade": "alertas",
+          "sentido": "menor"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "nome": "Evolução e escala",
+      "status": "pendente",
+      "inicio_previsto": "2027-04-13",
+      "fim_previsto": "2027-10-11",
+      "inicio_real": null,
+      "fim_real": null,
+      "documento": "docs/fases/fase-6-evolucao-escala.md",
+      "subagente": "evolucao-escala",
+      "portao": [
+        {
+          "item": "Queda de até 5 pontos de mAP50 em ruas e cidades novas",
+          "ok": false
+        },
+        {
+          "item": "Processamento mais rápido que a passada",
+          "ok": false
+        },
+        {
+          "item": "3 ciclos mensais de retreino",
+          "ok": false
+        },
+        {
+          "item": "Dataset publicado com DOI",
+          "ok": false
+        }
+      ],
+      "indicadores": [
+        {
+          "nome": "Ciclos de retreino",
+          "atual": 0,
+          "meta": 3,
+          "unidade": "ciclos",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Queda de mAP50 em cidade nova",
+          "atual": null,
+          "meta": 5,
+          "unidade": "pontos",
+          "sentido": "menor"
+        },
+        {
+          "nome": "Dataset publicado",
+          "atual": false,
+          "meta": true,
+          "unidade": "",
+          "sentido": "sim_nao"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "nome": "Gêmeo digital geolocalizado",
+      "status": "pendente",
+      "inicio_previsto": "2027-10-12",
+      "fim_previsto": "2028-04-30",
+      "inicio_real": null,
+      "fim_real": null,
+      "documento": "docs/fases/fase-7-gemeo-digital.md",
+      "subagente": "gemeo-digital",
+      "portao": [
+        {
+          "item": "Relatório semestral sai do banco",
+          "ok": false
+        },
+        {
+          "item": "Defeito acompanhado da vala até a baixa",
+          "ok": false
+        },
+        {
+          "item": "Previsão melhor que a regra de idade",
+          "ok": false
+        }
+      ],
+      "indicadores": [
+        {
+          "nome": "Defeitos com identidade estável",
+          "atual": null,
+          "meta": 95,
+          "unidade": "%",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Defeitos associados à vala ou pré-existentes",
+          "atual": null,
+          "meta": 100,
+          "unidade": "%",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Relatório semestral sem planilha",
+          "atual": false,
+          "meta": true,
+          "unidade": "",
+          "sentido": "sim_nao"
+        }
+      ]
+    }
+  ],
+  "tarefas": [
+    {
+      "id": "F0-01",
+      "fase": 0,
+      "titulo": "Fechar classes e graus no guia de rotulagem v1",
+      "coluna": "revisao",
+      "responsavel": "Eliakim + coleta-campo",
+      "prazo": "2026-10-27",
+      "bloqueada": false,
+      "nota": "Rascunho v1 pronto em docs/guias/guia-rotulagem.md; falta validar com a ASTM E2840"
+    },
+    {
+      "id": "F0-02",
+      "fase": 0,
+      "titulo": "Comprar e comparar com a ASTM E2840",
+      "coluna": "a_fazer",
+      "responsavel": "Eliakim",
+      "prazo": "2026-10-27",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F0-03",
+      "fase": 0,
+      "titulo": "Escolher e registrar as 4 ruas do piloto",
+      "coluna": "a_fazer",
+      "responsavel": "Eliakim",
+      "prazo": "2026-10-24",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F0-04",
+      "fase": 0,
+      "titulo": "Montar o kit de campo",
+      "coluna": "a_fazer",
+      "responsavel": "Eliakim",
+      "prazo": "2026-10-28",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F0-05",
+      "fase": 0,
+      "titulo": "Fixar e documentar a configuração da câmera C1",
+      "coluna": "a_fazer",
+      "responsavel": "coleta-campo",
+      "prazo": "2026-10-29",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F0-06",
+      "fase": 0,
+      "titulo": "Teste de 10 minutos aprovado",
+      "coluna": "a_fazer",
+      "responsavel": "Eliakim",
+      "prazo": "2026-10-31",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F0-07",
+      "fase": 0,
+      "titulo": "Autorização escrita para uso das imagens",
+      "coluna": "a_fazer",
+      "responsavel": "Eliakim",
+      "prazo": "2026-11-02",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F0-08",
+      "fase": 0,
+      "titulo": "Criar projeto Supabase com RLS e rodar o Security Advisor",
+      "coluna": "fazendo",
+      "responsavel": "seguranca-supabase",
+      "prazo": "2026-10-28",
+      "bloqueada": false,
+      "nota": "Migração 0001 pronta e testada localmente (12 de 12 testes de RLS); falta criar o projeto e aplicar"
+    },
+    {
+      "id": "F0-09",
+      "fase": 0,
+      "titulo": "Estrutura de pastas e planilha de vistoria",
+      "coluna": "revisao",
+      "responsavel": "coleta-campo",
+      "prazo": "2026-10-24",
+      "bloqueada": false,
+      "nota": "Pastas e modelo de planilha criados; conferir as colunas"
+    },
+    {
+      "id": "F0-10",
+      "fase": 0,
+      "titulo": "Registrar o método no diário de pesquisa",
+      "coluna": "fazendo",
+      "responsavel": "redator-artigo",
+      "prazo": "2026-11-02",
+      "bloqueada": false,
+      "nota": "Diário iniciado"
+    },
+    {
+      "id": "F1-01",
+      "fase": 1,
+      "titulo": "Planejar passadas por rua e configuração",
+      "coluna": "backlog",
+      "responsavel": "coleta-campo",
+      "prazo": "2026-11-23",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F1-02",
+      "fase": 1,
+      "titulo": "Passadas C1 nas 4 ruas (ida e volta)",
+      "coluna": "backlog",
+      "responsavel": "Eliakim",
+      "prazo": "2026-11-23",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F1-03",
+      "fase": 1,
+      "titulo": "Passadas C2 nas 4 ruas",
+      "coluna": "backlog",
+      "responsavel": "Eliakim",
+      "prazo": "2026-11-23",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F1-04",
+      "fase": 1,
+      "titulo": "Fotos C3 dos trechos com defeito",
+      "coluna": "backlog",
+      "responsavel": "Eliakim",
+      "prazo": "2026-11-23",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F1-05",
+      "fase": 1,
+      "titulo": "Passada C1 com pavimento molhado",
+      "coluna": "backlog",
+      "responsavel": "Eliakim",
+      "prazo": "2026-11-23",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F1-06",
+      "fase": 1,
+      "titulo": "Medir 20 peças por rua",
+      "coluna": "backlog",
+      "responsavel": "Eliakim",
+      "prazo": "2026-11-23",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F1-07",
+      "fase": 1,
+      "titulo": "Vistoria de 50 defeitos com fotos",
+      "coluna": "backlog",
+      "responsavel": "Eliakim",
+      "prazo": "2026-11-23",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F1-08",
+      "fase": 1,
+      "titulo": "Segunda avaliação de grau em 10 defeitos",
+      "coluna": "backlog",
+      "responsavel": "Segundo avaliador",
+      "prazo": "2026-11-23",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F1-09",
+      "fase": 1,
+      "titulo": "Scripts de extração, nitidez e duplicatas",
+      "coluna": "backlog",
+      "responsavel": "coleta-campo",
+      "prazo": "2026-11-23",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F1-10",
+      "fase": 1,
+      "titulo": "Script de anonimização",
+      "coluna": "backlog",
+      "responsavel": "coleta-campo",
+      "prazo": "2026-11-23",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F1-11",
+      "fase": 1,
+      "titulo": "Relatórios de coleta e conferência da amostra",
+      "coluna": "backlog",
+      "responsavel": "coleta-campo",
+      "prazo": "2026-11-23",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F1-12",
+      "fase": 1,
+      "titulo": "Registrar a coleta no diário de pesquisa",
+      "coluna": "backlog",
+      "responsavel": "redator-artigo",
+      "prazo": "2026-11-23",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F2-01",
+      "fase": 2,
+      "titulo": "Instalar CVAT e criar os projetos",
+      "coluna": "backlog",
+      "responsavel": "rotulagem-dataset",
+      "prazo": "2026-12-21",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F2-02",
+      "fase": 2,
+      "titulo": "Script de pré-rótulo com SAM 3",
+      "coluna": "backlog",
+      "responsavel": "rotulagem-dataset",
+      "prazo": "2026-12-21",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F2-03",
+      "fase": 2,
+      "titulo": "Rotular defeitos das 4 ruas",
+      "coluna": "backlog",
+      "responsavel": "Eliakim",
+      "prazo": "2026-12-21",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F2-04",
+      "fase": 2,
+      "titulo": "Rotular grade em 150 a 200 imagens",
+      "coluna": "backlog",
+      "responsavel": "Eliakim",
+      "prazo": "2026-12-21",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F2-05",
+      "fase": 2,
+      "titulo": "Garantir 20% a 30% de imagens sem defeito",
+      "coluna": "backlog",
+      "responsavel": "rotulagem-dataset",
+      "prazo": "2026-12-21",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F2-06",
+      "fase": 2,
+      "titulo": "Revisão cruzada de 10% e concordância",
+      "coluna": "backlog",
+      "responsavel": "Revisor + rotulagem-dataset",
+      "prazo": "2026-12-21",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F2-07",
+      "fase": 2,
+      "titulo": "Guia de rotulagem v1.1",
+      "coluna": "backlog",
+      "responsavel": "rotulagem-dataset",
+      "prazo": "2026-12-21",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F2-08",
+      "fase": 2,
+      "titulo": "Divisão por rua e exportação YOLO e COCO",
+      "coluna": "backlog",
+      "responsavel": "rotulagem-dataset",
+      "prazo": "2026-12-21",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F2-09",
+      "fase": 2,
+      "titulo": "LEIAME do dataset v1 e registro no diário",
+      "coluna": "backlog",
+      "responsavel": "redator-artigo",
+      "prazo": "2026-12-21",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F3-01",
+      "fase": 3,
+      "titulo": "Ambiente de treino e requirements.txt",
+      "coluna": "backlog",
+      "responsavel": "treino-modelos",
+      "prazo": "2027-01-18",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F3-02",
+      "fase": 3,
+      "titulo": "Linha de base E000",
+      "coluna": "backlog",
+      "responsavel": "treino-modelos",
+      "prazo": "2027-01-18",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F3-03",
+      "fase": 3,
+      "titulo": "Experimentos de defeitos E010, E011, E020, E030",
+      "coluna": "backlog",
+      "responsavel": "treino-modelos",
+      "prazo": "2027-01-18",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F3-04",
+      "fase": 3,
+      "titulo": "Modelo da grade",
+      "coluna": "backlog",
+      "responsavel": "treino-modelos",
+      "prazo": "2027-01-18",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F3-05",
+      "fase": 3,
+      "titulo": "Experimentos por configuração (C1, C2, cruzado)",
+      "coluna": "backlog",
+      "responsavel": "treino-modelos",
+      "prazo": "2027-01-18",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F3-06",
+      "fase": 3,
+      "titulo": "Avaliação única no teste fixo",
+      "coluna": "backlog",
+      "responsavel": "treino-modelos",
+      "prazo": "2027-01-18",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F3-07",
+      "fase": 3,
+      "titulo": "Figuras de acerto e erro",
+      "coluna": "backlog",
+      "responsavel": "treino-modelos + redator-artigo",
+      "prazo": "2027-01-18",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F3-08",
+      "fase": 3,
+      "titulo": "Tabela de experimentos atualizada",
+      "coluna": "backlog",
+      "responsavel": "redator-artigo",
+      "prazo": "2027-01-18",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F4-01",
+      "fase": 4,
+      "titulo": "Análise dos 50 piores erros",
+      "coluna": "backlog",
+      "responsavel": "pos-treino-medicao",
+      "prazo": "2027-02-15",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F4-02",
+      "fase": 4,
+      "titulo": "Dataset v1.1 e retreino",
+      "coluna": "backlog",
+      "responsavel": "rotulagem-dataset + treino-modelos",
+      "prazo": "2027-02-15",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F4-03",
+      "fase": 4,
+      "titulo": "Limiares por classe",
+      "coluna": "backlog",
+      "responsavel": "pos-treino-medicao",
+      "prazo": "2027-02-15",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F4-04",
+      "fase": 4,
+      "titulo": "Módulo da grade e homografia",
+      "coluna": "backlog",
+      "responsavel": "pos-treino-medicao",
+      "prazo": "2027-02-15",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F4-05",
+      "fase": 4,
+      "titulo": "Módulo de medidas",
+      "coluna": "backlog",
+      "responsavel": "pos-treino-medicao",
+      "prazo": "2027-02-15",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F4-06",
+      "fase": 4,
+      "titulo": "Comparação com a vistoria de campo",
+      "coluna": "backlog",
+      "responsavel": "pos-treino-medicao",
+      "prazo": "2027-02-15",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F4-07",
+      "fase": 4,
+      "titulo": "Regras de severidade e kappa",
+      "coluna": "backlog",
+      "responsavel": "pos-treino-medicao",
+      "prazo": "2027-02-15",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F4-08",
+      "fase": 4,
+      "titulo": "Rastreamento e melhor vista",
+      "coluna": "backlog",
+      "responsavel": "pos-treino-medicao",
+      "prazo": "2027-02-15",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F4-09",
+      "fase": 4,
+      "titulo": "Exportação ONNX e pipeline de ponta a ponta",
+      "coluna": "backlog",
+      "responsavel": "pos-treino-medicao",
+      "prazo": "2027-02-15",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F4-10",
+      "fase": 4,
+      "titulo": "Relatório de medição para o artigo",
+      "coluna": "backlog",
+      "responsavel": "redator-artigo",
+      "prazo": "2027-02-15",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F5-01",
+      "fase": 5,
+      "titulo": "Escolher a obra e combinar a rotina",
+      "coluna": "backlog",
+      "responsavel": "Eliakim",
+      "prazo": "2027-04-12",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F5-02",
+      "fase": 5,
+      "titulo": "Checklist de segurança completo",
+      "coluna": "backlog",
+      "responsavel": "seguranca-supabase",
+      "prazo": "2027-04-12",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F5-03",
+      "fase": 5,
+      "titulo": "Vistoria cautelar das valas novas",
+      "coluna": "backlog",
+      "responsavel": "Eliakim",
+      "prazo": "2027-04-12",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F5-04",
+      "fase": 5,
+      "titulo": "Módulo de envio ao Supabase",
+      "coluna": "backlog",
+      "responsavel": "piloto-painel",
+      "prazo": "2027-04-12",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F5-05",
+      "fase": 5,
+      "titulo": "Painel da obra (login, mapa, ficha, revisão)",
+      "coluna": "backlog",
+      "responsavel": "piloto-painel",
+      "prazo": "2027-04-12",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F5-06",
+      "fase": 5,
+      "titulo": "Relatório semanal",
+      "coluna": "backlog",
+      "responsavel": "piloto-painel",
+      "prazo": "2027-04-12",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F5-07",
+      "fase": 5,
+      "titulo": "Exportação de correções como rótulo",
+      "coluna": "backlog",
+      "responsavel": "piloto-painel",
+      "prazo": "2027-04-12",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F5-08",
+      "fase": 5,
+      "titulo": "Medição de tempo antes e depois",
+      "coluna": "backlog",
+      "responsavel": "Eliakim",
+      "prazo": "2027-04-12",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F5-09",
+      "fase": 5,
+      "titulo": "Trabalho técnico para congresso",
+      "coluna": "backlog",
+      "responsavel": "redator-artigo",
+      "prazo": "2027-04-12",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F6-01",
+      "fase": 6,
+      "titulo": "Script de aprendizado ativo",
+      "coluna": "backlog",
+      "responsavel": "evolucao-escala",
+      "prazo": "2027-10-11",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F6-02",
+      "fase": 6,
+      "titulo": "Primeiro ciclo mensal de retreino",
+      "coluna": "backlog",
+      "responsavel": "evolucao-escala + treino-modelos",
+      "prazo": "2027-10-11",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F6-03",
+      "fase": 6,
+      "titulo": "Novas ruas e tipos de peça",
+      "coluna": "backlog",
+      "responsavel": "Eliakim + rotulagem-dataset",
+      "prazo": "2027-10-11",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F6-04",
+      "fase": 6,
+      "titulo": "Avaliação em outra cidade",
+      "coluna": "backlog",
+      "responsavel": "evolucao-escala",
+      "prazo": "2027-10-11",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F6-05",
+      "fase": 6,
+      "titulo": "Profundidade por drone",
+      "coluna": "backlog",
+      "responsavel": "Eliakim + evolucao-escala",
+      "prazo": "2027-10-11",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F6-06",
+      "fase": 6,
+      "titulo": "Profundidade por LiDAR do celular",
+      "coluna": "backlog",
+      "responsavel": "Eliakim",
+      "prazo": "2027-10-11",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F6-07",
+      "fase": 6,
+      "titulo": "Teste da curvatura das juntas",
+      "coluna": "backlog",
+      "responsavel": "pos-treino-medicao",
+      "prazo": "2027-10-11",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F6-08",
+      "fase": 6,
+      "titulo": "Dataset no Zenodo com DOI",
+      "coluna": "backlog",
+      "responsavel": "evolucao-escala + redator-artigo",
+      "prazo": "2027-10-11",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F6-09",
+      "fase": 6,
+      "titulo": "Pesos e card do modelo no Hugging Face",
+      "coluna": "backlog",
+      "responsavel": "evolucao-escala",
+      "prazo": "2027-10-11",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F6-10",
+      "fase": 6,
+      "titulo": "Demonstração pública",
+      "coluna": "backlog",
+      "responsavel": "evolucao-escala",
+      "prazo": "2027-10-11",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F7-01",
+      "fase": 7,
+      "titulo": "Tabela de trechos a partir do OpenStreetMap",
+      "coluna": "backlog",
+      "responsavel": "gemeo-digital",
+      "prazo": "2028-04-30",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F7-02",
+      "fase": 7,
+      "titulo": "Casamento de trajeto",
+      "coluna": "backlog",
+      "responsavel": "gemeo-digital",
+      "prazo": "2028-04-30",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F7-03",
+      "fase": 7,
+      "titulo": "Identidade persistente dos defeitos",
+      "coluna": "backlog",
+      "responsavel": "gemeo-digital",
+      "prazo": "2028-04-30",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F7-04",
+      "fase": 7,
+      "titulo": "Tabelas de valas e recomposições",
+      "coluna": "backlog",
+      "responsavel": "gemeo-digital + seguranca-supabase",
+      "prazo": "2028-04-30",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F7-05",
+      "fase": 7,
+      "titulo": "Associação defeito e vala",
+      "coluna": "backlog",
+      "responsavel": "gemeo-digital",
+      "prazo": "2028-04-30",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F7-06",
+      "fase": 7,
+      "titulo": "Indicadores do gêmeo no painel",
+      "coluna": "backlog",
+      "responsavel": "gemeo-digital",
+      "prazo": "2028-04-30",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F7-07",
+      "fase": 7,
+      "titulo": "Modelo de previsão",
+      "coluna": "backlog",
+      "responsavel": "gemeo-digital",
+      "prazo": "2028-04-30",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F7-08",
+      "fase": 7,
+      "titulo": "Ordem de serviço automática e baixa",
+      "coluna": "backlog",
+      "responsavel": "gemeo-digital",
+      "prazo": "2028-04-30",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F7-09",
+      "fase": 7,
+      "titulo": "3D dos trechos críticos",
+      "coluna": "backlog",
+      "responsavel": "Eliakim + gemeo-digital",
+      "prazo": "2028-04-30",
+      "bloqueada": false,
+      "nota": ""
+    },
+    {
+      "id": "F7-10",
+      "fase": 7,
+      "titulo": "Artigo internacional com o gêmeo",
+      "coluna": "backlog",
+      "responsavel": "redator-artigo",
+      "prazo": "2028-04-30",
+      "bloqueada": false,
+      "nota": ""
+    }
+  ],
+  "ruas": [],
+  "historico": [
+    {
+      "data": "2026-10-19",
+      "evento": "Migração 0001 testada em Postgres local com PostGIS: 8 verificações de segurança limpas e 12 de 12 testes de RLS aprovados"
+    },
+    {
+      "data": "2026-10-19",
+      "evento": "Repositório criado com documentos das 8 fases, orquestrador, 10 subagentes e painel"
+    }
+  ]
+}

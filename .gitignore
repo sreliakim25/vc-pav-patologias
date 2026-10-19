@@ -1,0 +1,57 @@
+# ===== Segredos (nunca vão para o Git) =====
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+supabase/.temp/
+supabase/.branches/
+
+# ===== Dados brutos e pesados =====
+# A estrutura de pastas é versionada pelos README.md; o conteúdo não.
+dados/*
+!dados/README.md
+modelos/*
+!modelos/README.md
+*.mp4
+*.mov
+*.MP4
+*.MOV
+*.LRV
+*.THM
+*.insv
+*.zip
+*.tar.gz
+
+# ===== Pesos e saídas de treino =====
+*.pt
+*.pth
+*.onnx
+*.engine
+*.ckpt
+*.safetensors
+runs/
+wandb/
+mlruns/
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ===== Node =====
+node_modules/
+
+# ===== Sistema e editores =====
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# ===== Claude Code: configurações locais =====
+.claude/settings.local.json
