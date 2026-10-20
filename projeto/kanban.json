@@ -642,6 +642,16 @@
       "nota": "Protocolo de coleta planejado registrado em 2026-10-20; falta registrar altura e ângulo da câmera, foto do kit, ruas e teste (F0-03 a F0-06)"
     },
     {
+      "id": "F0-11",
+      "fase": 0,
+      "titulo": "Identificar fontes de limites do guia: especificação municipal (15 mm) e intertravado permeável",
+      "coluna": "backlog",
+      "responsavel": "Eliakim",
+      "prazo": null,
+      "bloqueada": false,
+      "nota": "Lacuna registrada em 2026-10-20; não bloqueia o portão. Resolver antes de redigir a seção 3.4 do artigo"
+    },
+    {
       "id": "F1-01",
       "fase": 1,
       "titulo": "Planejar passadas por rua e configuração",
@@ -1334,6 +1344,10 @@
   ],
   "ruas": [],
   "historico": [
+    {
+      "data": "2026-10-20",
+      "evento": "Fontes dos limites de 15 mm (paralelepípedo) e de intertravado permeável registradas como lacuna (F0-11)"
+    },
     {
       "data": "2026-10-20",
       "evento": "F0-01 concluída: guia de rotulagem v1 fechado com as decisões do Eliakim sobre a comparação ASTM (8 classes, junta_aberta única, tag trilha_roda)"

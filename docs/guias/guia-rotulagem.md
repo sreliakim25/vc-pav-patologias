@@ -48,11 +48,11 @@ Os limites marcados como "a calibrar" serão ajustados com a vistoria de campo d
 
 | Classe | Medida | Baixo | Médio | Alto | Origem |
 |---|---|---|---|---|---|
-| `afundamento` | Profundidade sob régua de 3 m | intertravado: até 13 mm; paralelepípedo: até 15 mm | a calibrar (proposta: até 3 cm) | a calibrar (proposta: acima de 3 cm ou com água parada) | 13 mm: ASTM E2840 via manual ABCP (2022); 15 mm: especificações municipais de recebimento de paralelepípedo |
+| `afundamento` | Profundidade sob régua de 3 m | intertravado: até 13 mm; paralelepípedo: até 15 mm | a calibrar (proposta: até 3 cm) | a calibrar (proposta: acima de 3 cm ou com água parada) | 13 mm: ASTM E2840 via manual ABCP (2022); 15 mm: especificações municipais de recebimento de paralelepípedo (fonte a identificar, F0-11) |
 | `peca_faltante` | Peças contíguas afetadas | 1 peça isolada | 2 a 5 peças | mais de 5 ou buraco aberto | Baixo: ASTM E2840 via manual ABCP (2022); médio e alto: proposta, a calibrar |
 | `peca_quebrada` | Estado da peça | fissura, lasca ou canto quebrado, sem perda de material | peça partida no lugar | fragmentos soltos | ASTM E2840 via manual ABCP (2022): 1 ou 2 peças danificadas sem separação são aceitáveis; graus: proposta, a calibrar |
-| `junta_aberta` | Largura da junta | 6 a 10 mm | 11 a 15 mm | acima de 15 mm | Limite aceitável de 10 mm: ASTM E2840 via manual ABCP (2022); faixas: publicado para intertravado permeável |
-| `desconfinamento` | Junta e rotação junto ao meio-fio | junta de 6 a 13 mm, sem rotação | com rotação | rotação e recalque local | Baixo: ASTM E2840 via manual ABCP (2022); médio e alto: publicado para intertravado permeável |
+| `junta_aberta` | Largura da junta | 6 a 10 mm | 11 a 15 mm | acima de 15 mm | Limite aceitável de 10 mm: ASTM E2840 via manual ABCP (2022); faixas: publicado para intertravado permeável (fonte a identificar, F0-11) |
+| `desconfinamento` | Junta e rotação junto ao meio-fio | junta de 6 a 13 mm, sem rotação | com rotação | rotação e recalque local | Baixo: ASTM E2840 via manual ABCP (2022); médio e alto: publicado para intertravado permeável (fonte a identificar, F0-11) |
 | `desnivel` | Degrau medido com régua de 30 cm | até 6 mm | a calibrar | a calibrar | Baixo: ASTM E2840 via manual ABCP (2022); médio e alto: a definir com a vistoria |
 | `remendo` | Área em m² | sem grau, só área | | | |
 | `vegetacao` | Percentual da área | sem grau, só extensão | | | |
