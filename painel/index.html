@@ -313,7 +313,7 @@ a { color: var(--vinho); }
     },
     {
      "item": "Supabase com RLS e sem alertas críticos",
-     "ok": false
+     "ok": true
     }
    ],
    "indicadores": [
@@ -871,11 +871,11 @@ a { color: var(--vinho); }
    "id": "F0-08",
    "fase": 0,
    "titulo": "Criar projeto Supabase com RLS e rodar o Security Advisor",
-   "coluna": "fazendo",
+   "coluna": "feito",
    "responsavel": "seguranca-supabase",
    "prazo": "2026-10-28",
    "bloqueada": false,
-   "nota": "Migrações 0001 a 0003 aplicadas no real; 10 de 10 verificações vazias; Security Advisor com 0 erros. Falta o Eliakim: rerun do Advisor, conferir exposed schemas, desligar cadastro aberto, 2FA, backups, desativar chaves legadas"
+   "nota": "Concluída em 2026-10-20: migrações 0001 a 0003 no real, 10 de 10 verificações vazias, Security Advisor 0 erros e 0 avisos (relato do Eliakim), exposed schemas conferidos, cadastro aberto desligado, 2FA ligado, chaves legadas desativadas. Plano free sem backup automático: ver F5-10"
   },
   {
    "id": "F0-09",
@@ -1378,6 +1378,16 @@ a { color: var(--vinho); }
    "nota": ""
   },
   {
+   "id": "F5-10",
+   "fase": 5,
+   "titulo": "Rotina de backup do Supabase antes de subir dado real",
+   "coluna": "backlog",
+   "responsavel": "seguranca-supabase",
+   "prazo": null,
+   "bloqueada": false,
+   "nota": "Plano free não tem backup automático (docs do Supabase). Definir dump periódico guardado fora do Git, ou migrar para o Pro, antes do primeiro dado real"
+  },
+  {
    "id": "F6-01",
    "fase": 6,
    "titulo": "Script de aprendizado ativo",
@@ -1580,6 +1590,10 @@ a { color: var(--vinho); }
  ],
  "ruas": [],
  "historico": [
+  {
+   "data": "2026-10-20",
+   "evento": "F0-08 concluída: Security Advisor com 0 erros e 0 avisos; item do Supabase no portão da fase 0 aprovado. Criada F5-10 (backup, plano free)"
+  },
   {
    "data": "2026-10-20",
    "evento": "Migração 0003 aplicada: auxiliares do RLS movidas para o schema privado e rls_auto_enable fechada; 10 verificações vazias e RPC das funções sem acesso"
