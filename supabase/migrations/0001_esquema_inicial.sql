@@ -1,6 +1,6 @@
 -- =====================================================================
 -- 0001_esquema_inicial.sql
--- Esquema inicial do projeto Patologias em Pavimento de Peças.
+-- Esquema inicial do projeto Patologias em Pavimento de Paver e Paralelepípedo.
 --
 -- Princípios de segurança (ver docs/guias/seguranca-supabase.md):
 --   1. RLS ligado em TODAS as tabelas, na mesma migração que as cria.

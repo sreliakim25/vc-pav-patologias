@@ -1,12 +1,12 @@
 cff-version: 1.2.0
 message: "Se usar este projeto, cite-o conforme abaixo."
-title: "Patologias em Pavimento de Peças: detecção, medição e classificação de severidade em pavimentos intertravados e de paralelepípedo com visão computacional"
+title: "Patologias em Pavimento de Paver e Paralelepípedo: detecção, medição e classificação de severidade em pavimentos intertravados e de paralelepípedo com visão computacional"
 type: software
 authors:
   - family-names: Rocha
     given-names: Eliakim
 license: Apache-2.0
-repository-code: "https://github.com/SEU-USUARIO/patologias-pavimento-pecas"
+repository-code: "https://github.com/sreliakim25/vc-pav-patologias"
 date-released: 2026-10-19
 version: 0.1.0
 keywords:

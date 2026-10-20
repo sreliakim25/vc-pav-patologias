@@ -55,3 +55,6 @@ Thumbs.db
 
 # ===== Claude Code: configurações locais =====
 .claude/settings.local.json
+
+# Normas e manuais de terceiros (direitos autorais): ficam só na máquina local
+docs/normas/

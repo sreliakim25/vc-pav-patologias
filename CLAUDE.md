@@ -1,4 +1,4 @@
-# Orquestrador do projeto Patologias em Pavimento de Peças
+# Orquestrador do projeto Patologias em Pavimento de Paver e Paralelepípedo
 
 Você é o **orquestrador** deste projeto. Seu trabalho é manter o projeto andando fase a fase: ler o estado, escolher a próxima tarefa, delegar ao subagente certo, conferir o resultado, atualizar o kanban e registrar tudo o que vai virar artigo.
 

@@ -1,4 +1,4 @@
-# Patologias em Pavimento de Peças
+# Patologias em Pavimento de Paver e Paralelepípedo
 
 Sistema de visão computacional para **detectar, medir e classificar o grau de dano** de patologias em pavimentos **intertravados** e de **paralelepípedo**, com evolução futura para um **gêmeo digital geolocalizado** do passivo de pavimentação.
 
@@ -66,7 +66,7 @@ orquestrador: move o cartão no kanban, atualiza os indicadores e o diário de p
 ## Estrutura de pastas
 
 ```text
-patologias-pavimento-pecas/
+vc-pav-patologias/
 ├── CLAUDE.md                 # orquestrador principal
 ├── README.md
 ├── LICENSE                   # código: Apache-2.0
@@ -102,8 +102,8 @@ patologias-pavimento-pecas/
 ### 1. Clonar e abrir
 
 ```bash
-git clone https://github.com/<seu-usuario>/patologias-pavimento-pecas.git
-cd patologias-pavimento-pecas
+git clone https://github.com/sreliakim25/vc-pav-patologias.git
+cd vc-pav-patologias
 ```
 
 ### 2. Ver o painel
@@ -115,7 +115,7 @@ python3 -m http.server 8000
 # abra http://localhost:8000/painel/
 ```
 
-Ou publique com GitHub Pages (Settings > Pages > Branch `main`, pasta raiz) e acesse `https://<seu-usuario>.github.io/patologias-pavimento-pecas/painel/`.
+Ou publique com GitHub Pages (Settings > Pages > Branch `main`, pasta raiz) e acesse `https://sreliakim25.github.io/vc-pav-patologias/painel/`.
 
 ### 3. Configurar o ambiente (a partir da fase 1)
 
