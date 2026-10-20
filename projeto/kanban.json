@@ -618,8 +618,8 @@
       "coluna": "fazendo",
       "responsavel": "seguranca-supabase",
       "prazo": "2026-10-28",
-      "bloqueada": true,
-      "nota": "Bloqueada: conta Supabase free no limite de 2 projetos ativos (relato do Eliakim, 2026-10-20). Migração aprovada; decidir entre pausar um projeto, plano Pro ou adiar para a fase 5"
+      "bloqueada": false,
+      "nota": "Migrações 0001 e 0002 aplicadas no projeto real; 9 de 9 verificações vazias; anon bloqueado via REST. Falta o Eliakim: Security Advisor, desligar cadastro aberto, 2FA, backups, desativar chaves legadas"
     },
     {
       "id": "F0-09",
@@ -1324,6 +1324,14 @@
   ],
   "ruas": [],
   "historico": [
+    {
+      "data": "2026-10-20",
+      "evento": "Supabase real: 0001 aplicada; revisão achou privilégio excessivo de authenticated na view resumo_passivo, corrigido pela 0002; 9 verificações de segurança vazias"
+    },
+    {
+      "data": "2026-10-20",
+      "evento": "F0-08 desbloqueada: projeto Supabase criado e conexão local testada; repositório publicado em github.com/sreliakim25/vc-pav-patologias"
+    },
     {
       "data": "2026-10-20",
       "evento": "F0-08 bloqueada: plano free do Supabase não permite um terceiro projeto ativo"

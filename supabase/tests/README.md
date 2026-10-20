@@ -20,11 +20,19 @@ psql "postgresql://postgres:postgres@127.0.0.1:54322/postgres" -f supabase/tests
 createdb teste
 psql -d teste -v ON_ERROR_STOP=1 -f supabase/tests/simulacao_supabase.sql
 psql -d teste -v ON_ERROR_STOP=1 -f supabase/migrations/0001_esquema_inicial.sql
+psql -d teste -v ON_ERROR_STOP=1 -f supabase/migrations/0002_privilegios_authenticated.sql
 psql -d teste -f supabase/verificar_seguranca.sql
 psql -d teste -f supabase/tests/teste_rls.sql
 ```
 
-## Resultado da última execução (2026-10-19, PostgreSQL 16 + PostGIS 3)
+## Projeto real (Supabase, 2026-10-20, PostgreSQL 17.11 + PostGIS 3.3.7)
+
+- Migrações 0001 e 0002 aplicadas pelo SQL, em transação.
+- `verificar_seguranca.sql`: as 9 consultas voltaram vazias (a 9ª foi criada junto com a 0002).
+- Chave publishable via REST: as 6 tabelas e a view respondem 401 (42501); buckets e objetos não aparecem.
+- `teste_rls.sql` não roda no projeto real (insere dados de teste).
+
+## Resultado local (2026-10-19, PostgreSQL 16 + PostGIS 3)
 
 - `verificar_seguranca.sql`: as 8 consultas voltaram vazias.
 - `teste_rls.sql`: os 12 testes deram o resultado esperado.

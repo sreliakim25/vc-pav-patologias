@@ -62,3 +62,12 @@ from information_schema.role_table_grants
 where grantee = 'anon'
   and table_schema = 'public'
   and table_name not in ('spatial_ref_sys', 'geography_columns', 'geometry_columns');
+
+-- 9. Privilégios de authenticated além de SELECT e INSERT em objetos do public
+-- (incluída após a 0002: o Supabase concede tudo a authenticated por padrão)
+select 'privilegio excessivo para authenticated' as problema, table_name, privilege_type
+from information_schema.role_table_grants
+where grantee = 'authenticated'
+  and table_schema = 'public'
+  and privilege_type not in ('SELECT', 'INSERT')
+  and table_name not in ('spatial_ref_sys', 'geography_columns', 'geometry_columns');
