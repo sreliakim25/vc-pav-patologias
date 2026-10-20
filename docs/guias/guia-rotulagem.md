@@ -1,6 +1,6 @@
 # Guia de rotulagem
 
-Versão: **v1 (proposta inicial, a calibrar na fase 1)**
+Versão: **v1 (2026-10-20, alinhada à ASTM E2840; limites "a calibrar" serão ajustados com a vistoria da fase 1)**
 
 Este guia define o que cada classe significa, como desenhar o rótulo e como dar o grau de severidade. Toda pessoa que rotula segue este guia; toda dúvida recorrente vira uma regra nova aqui, com a versão atualizada.
 
@@ -35,9 +35,9 @@ Exemplo: um afundamento com duas peças faltantes no meio recebe **duas máscara
 |---|---|---|---|---|
 | `afundamento` | Afundamento ou recalque | Sim | Sim | Contorne a área visivelmente rebaixada, com peças inclinadas ou água parada |
 | `peca_faltante` | Peça faltante ou solta | Sim | Sim | Contorne o buraco deixado pela peça ou a peça claramente solta |
-| `peca_quebrada` | Peça quebrada | Sim | Raro | Contorne cada peça quebrada |
+| `peca_quebrada` | Peça danificada: fissura, lasca, canto quebrado ou peça partida | Sim | Raro | Contorne cada peça danificada |
 | `junta_aberta` | Junta aberta ou perda de areia/rejunte | Sim | Sim (perda de rejunte) | Contorne a faixa de juntas abertas, não cada junta isolada |
-| `desconfinamento` | Desconfinamento de borda | Sim | Sim | Contorne a faixa junto ao meio-fio com peças deslocadas ou giradas |
+| `desconfinamento` | Desconfinamento de borda | Sim | Sim | Contorne a faixa junto ao meio-fio com peças deslocadas ou giradas; o problema costuma ficar entre 0,3 e 0,6 m da borda |
 | `desnivel` | Desnível entre peças | Sim | Sim | Contorne o grupo de peças com degrau visível |
 | `remendo` | Remendo com outro material | Sim | Sim | Contorne a área de asfalto ou concreto aplicada sobre o pavimento de peças |
 | `vegetacao` | Vegetação na junta | Sim | Sim | Contorne a área com vegetação visível |
@@ -48,12 +48,12 @@ Os limites marcados como "a calibrar" serão ajustados com a vistoria de campo d
 
 | Classe | Medida | Baixo | Médio | Alto | Origem |
 |---|---|---|---|---|---|
-| `afundamento` | Profundidade sob régua de 3 m | até 1,5 cm | 1,5 a 3 cm | acima de 3 cm ou com água parada | 1,5 cm: especificações municipais de recebimento de paralelepípedo; demais: proposta |
-| `peca_faltante` | Peças contíguas afetadas | 1 peça | 2 a 5 peças | mais de 5 ou buraco aberto | Proposta, a calibrar |
-| `peca_quebrada` | Estado da peça | fissura sem perda de material | peça partida no lugar | fragmentos soltos | Proposta, a calibrar |
-| `junta_aberta` | Largura da junta | 0,6 a 1,0 cm | 1,1 a 1,5 cm | acima de 1,5 cm | Publicado para intertravado permeável; confirmar para o comum |
-| `desconfinamento` | Junta e rotação junto ao meio-fio | junta aumentada, sem rotação | com rotação | rotação e recalque local | Publicado para intertravado permeável |
-| `desnivel` | Degrau em mm | a calibrar | a calibrar | a calibrar | A definir com a vistoria |
+| `afundamento` | Profundidade sob régua de 3 m | intertravado: até 13 mm; paralelepípedo: até 15 mm | a calibrar (proposta: até 3 cm) | a calibrar (proposta: acima de 3 cm ou com água parada) | 13 mm: ASTM E2840 via manual ABCP (2022); 15 mm: especificações municipais de recebimento de paralelepípedo |
+| `peca_faltante` | Peças contíguas afetadas | 1 peça isolada | 2 a 5 peças | mais de 5 ou buraco aberto | Baixo: ASTM E2840 via manual ABCP (2022); médio e alto: proposta, a calibrar |
+| `peca_quebrada` | Estado da peça | fissura, lasca ou canto quebrado, sem perda de material | peça partida no lugar | fragmentos soltos | ASTM E2840 via manual ABCP (2022): 1 ou 2 peças danificadas sem separação são aceitáveis; graus: proposta, a calibrar |
+| `junta_aberta` | Largura da junta | 6 a 10 mm | 11 a 15 mm | acima de 15 mm | Limite aceitável de 10 mm: ASTM E2840 via manual ABCP (2022); faixas: publicado para intertravado permeável |
+| `desconfinamento` | Junta e rotação junto ao meio-fio | junta de 6 a 13 mm, sem rotação | com rotação | rotação e recalque local | Baixo: ASTM E2840 via manual ABCP (2022); médio e alto: publicado para intertravado permeável |
+| `desnivel` | Degrau medido com régua de 30 cm | até 6 mm | a calibrar | a calibrar | Baixo: ASTM E2840 via manual ABCP (2022); médio e alto: a definir com a vistoria |
 | `remendo` | Área em m² | sem grau, só área | | | |
 | `vegetacao` | Percentual da área | sem grau, só extensão | | | |
 
@@ -66,6 +66,7 @@ Os limites marcados como "a calibrar" serão ajustados com a vistoria de campo d
 | `molhado` | Pavimento molhado na imagem |
 | `sombra_forte` | Sombra cobre parte relevante do defeito |
 | `vala` | Defeito está sobre recomposição de vala |
+| `trilha_roda` | Use em `afundamento` quando o rebaixo for longitudinal, no caminho da roda (ASTM E2840: *rutting*) |
 
 ## Grade de peças (subconjunto)
 
@@ -77,17 +78,31 @@ No projeto `grade-v1`:
 
 ## Mapeamento para a ASTM E2840
 
-Preencher na fase 0 depois da leitura da norma: para cada classe do projeto, o tipo de defeito correspondente na norma e as diferenças.
+Feito em 2026-10-20 com a prévia da ASTM E2840-11 (R2019) e o Manual de Desempenho ABCP (2022). Detalhes e fontes em [comparacao-astm-e2840.md](comparacao-astm-e2840.md).
 
 | Classe do projeto | Defeito na ASTM E2840 | Diferenças |
 |---|---|---|
-| `afundamento` | a preencher | |
-| `peca_faltante` | a preencher | |
-| `junta_aberta` | a preencher | |
-| `desconfinamento` | a preencher | |
+| `afundamento` | 2. Depressions; 11. Rutting (tag `trilha_roda`) | Paralelepípedo usa limite municipal (15 mm), não coberto pela ASTM |
+| `peca_faltante` | 9. Missing Pavers | Nenhuma |
+| `peca_quebrada` | 1. Damaged Pavers | Código mantido; definição ampliada para peça danificada |
+| `junta_aberta` | 4. Excessive Joint Width e 8. Joint Sand Loss/Pumping | Uma classe para os dois defeitos ASTM, graduada pela largura (decisão de 2026-10-20: mais simples de rotular na imagem) |
+| `desconfinamento` | 3. Edge Restraint | Nenhuma |
+| `desnivel` | 5. Faulting | Nenhuma |
+| `remendo` | 10. Patching | Sem grau, só área |
+| `vegetacao` | sem equivalente | Classe própria do projeto, relevante no paralelepípedo |
+
+### Defeitos da ASTM fora da rotulagem v1
+
+| Defeito ASTM | Tratamento |
+|---|---|
+| 6. Heave (elevação) | Não rotular: quase não se distingue numa imagem 2D. Registrar na planilha de vistoria; reavaliar com profundidade (LiDAR, fase 6) |
+| 7. Horizontal Creep (fluência horizontal) | Não rotular como máscara: medir como grandeza derivada da grade de peças na fase 4 (desvio do alinhamento das juntas) |
+
+As duas fontes tratam só de intertravado de concreto. Para o paralelepípedo, os limites seguem como proposta a calibrar com a vistoria da fase 1.
 
 ## Histórico de versões
 
 | Versão | Data | Mudança |
 |---|---|---|
-| v1 | 2026-10-19 | Proposta inicial com 8 classes e graus provisórios |
+| v1 | 2026-10-20 | Alinhada à ASTM E2840: limites de grau baixo com fonte em afundamento, peça faltante, peça danificada, desconfinamento e desnível; tag `trilha_roda`; mapeamento completo; `junta_aberta` mantida como classe única |
+| v1 (rascunho) | 2026-10-19 | Proposta inicial com 8 classes e graus provisórios |

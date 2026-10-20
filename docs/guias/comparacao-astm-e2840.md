@@ -1,8 +1,8 @@
 # Comparação do guia de rotulagem com a ASTM E2840 e o Manual de Desempenho ABCP
 
-Data: 2026-10-19 · Tarefas: F0-01 e F0-02 · Situação: **aguardando validação do Eliakim**
+Data: 2026-10-19 · Tarefas: F0-01 e F0-02 · Situação: **decidido pelo Eliakim em 2026-10-20** (ver seção 6)
 
-Este documento compara as classes e os graus de [guia-rotulagem.md](guia-rotulagem.md) (v1) com duas fontes. Ele separa o que **está escrito na fonte** do que é **proposta** deste projeto. Nenhuma mudança foi aplicada ao guia ainda.
+Este documento compara as classes e os graus de [guia-rotulagem.md](guia-rotulagem.md) (v1) com duas fontes. Ele separa o que **está escrito na fonte** do que é **proposta** deste projeto. As decisões estão na seção 6 e já foram aplicadas ao guia.
 
 ---
 
@@ -93,3 +93,16 @@ Cada item abaixo é **proposta** e só entra no guia depois da sua validação.
 
 1. **Apêndice X1 da ASTM E2840 completa.** Sem ele não há os graus baixo, médio e alto oficiais nem as curvas de dedução do PCI. A prévia não basta para calcular o PCI.
 2. **Sua validação das propostas P1 a P12.** Depois disso, o guia vira `v1` final, o `classes.json` é atualizado e a F0-01 pode ir para `feito`.
+
+---
+
+## 6. Decisões (Eliakim, 2026-10-20)
+
+| Proposta | Decisão |
+|---|---|
+| P1 | Aprovada: 13 mm no intertravado, 15 mm no paralelepípedo |
+| P2, P3, P4 | P2 e P4 rejeitadas: `junta_aberta` continua como classe única, graduada pela largura. P3 aplicada só na fonte (limite aceitável de 10 mm da ASTM) |
+| P5, P6, P7, P8, P12 | Aprovadas |
+| P9, P10, P11 | Aprovadas conforme proposto |
+
+Aplicado em [guia-rotulagem.md](guia-rotulagem.md) v1 e em [classes.json](classes.json).

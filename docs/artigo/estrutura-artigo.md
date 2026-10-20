@@ -34,7 +34,7 @@ A revista *Transportes* é a escolha natural para o artigo principal: é a mesma
 | 3.1 Área de estudo | Ruas, tipos de peça, referência de escala | Fase 0 e 1; `kanban.json` campo `ruas` | Esperando fase 1 |
 | 3.2 Coleta | Configurações C1 a C4, equipamentos, velocidades, filtros | Fase 1; relatórios de coleta | Esperando fase 1 |
 | 3.3 Verdade de campo | Vistoria de 50 defeitos, dupla avaliação | Fase 1; `vistoria.csv` | Esperando fase 1 |
-| 3.4 Classes e severidade | Guia de rotulagem, origem dos limites | `guia-rotulagem.md` | Rascunho possível |
+| 3.4 Classes e severidade | Guia de rotulagem, origem dos limites | `guia-rotulagem.md`, `comparacao-astm-e2840.md` | Pronto para rascunho (guia v1 fechado em 2026-10-20) |
 | 3.5 Dataset | Rotulagem, pré-rótulos, concordância, divisão por rua | Fase 2; `dataset-v1.md` | Esperando fase 2 |
 | 3.6 Modelos | Ajuste fino, arquiteturas, parâmetros, hardware | Fase 3; `experimentos.md` | Esperando fase 3 |
 | 3.7 Medição pela grade | Juntas, cantos, homografia, projeção, medidas | Fase 4 | Esperando fase 4 |

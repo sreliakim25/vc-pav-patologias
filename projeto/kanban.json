@@ -45,7 +45,7 @@
         },
         {
           "item": "Guia de rotulagem v1 publicado",
-          "ok": false
+          "ok": true
         },
         {
           "item": "4 ruas registradas no kanban",
@@ -545,11 +545,11 @@
       "id": "F0-01",
       "fase": 0,
       "titulo": "Fechar classes e graus no guia de rotulagem v1",
-      "coluna": "revisao",
+      "coluna": "feito",
       "responsavel": "Eliakim + coleta-campo",
       "prazo": "2026-10-27",
       "bloqueada": false,
-      "nota": "Comparação pronta em docs/guias/comparacao-astm-e2840.md: 12 propostas (P1 a P12) aguardando validação do Eliakim antes de fechar a v1"
+      "nota": "Guia v1 fechado em 2026-10-20: Eliakim aprovou P1, P5 a P12; rejeitou a divisão da junta (P2 e P4). 8 classes mantidas, tag trilha_roda nova"
     },
     {
       "id": "F0-02",
@@ -1334,6 +1334,10 @@
   ],
   "ruas": [],
   "historico": [
+    {
+      "data": "2026-10-20",
+      "evento": "F0-01 concluída: guia de rotulagem v1 fechado com as decisões do Eliakim sobre a comparação ASTM (8 classes, junta_aberta única, tag trilha_roda)"
+    },
     {
       "data": "2026-10-20",
       "evento": "F0-08 concluída: Security Advisor com 0 erros e 0 avisos; item do Supabase no portão da fase 0 aprovado. Criada F5-10 (backup, plano free)"

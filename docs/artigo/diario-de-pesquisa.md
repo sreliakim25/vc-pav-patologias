@@ -14,6 +14,38 @@ Registro cronológico de tudo que tem valor para o artigo: decisões de método,
 
 ---
 
+### 2026-10-20 · Fase 0 · Guia de rotulagem v1 fechado
+
+- **O que aconteceu:** o Eliakim decidiu as propostas P1 a P12 da comparação com a ASTM E2840 (tarefa F0-01). As decisões foram aplicadas em `docs/guias/guia-rotulagem.md`, agora v1 de 2026-10-20, e em `docs/guias/classes.json`. Fonte das decisões: `docs/guias/comparacao-astm-e2840.md`, seção 6. Esta entrada substitui o estado "proposta, não decisão" da subseção "Classes e severidade, versão 1" da entrada "Protocolo de coleta planejado", de mesma data.
+- **Decisões e motivos:**
+  - **P1 aprovada:** `afundamento` com grau baixo até 13 mm no intertravado e até 15 mm no paralelepípedo.
+  - **P2 e P4 rejeitadas:** `junta_aberta` continua classe única, graduada pela largura da junta. Motivo: é mais simples de rotular na imagem. O guia segue com **8 classes**; não existem `junta_larga` nem `perda_rejunte`.
+  - **P3 aplicada só na fonte:** as faixas de `junta_aberta` não mudam; a origem do limite aceitável de 10 mm passa a ser a ASTM E2840 via manual ABCP (2022).
+  - **P5 a P8 e P12 aprovadas:** grau baixo de `desnivel` e de `desconfinamento` preenchidos; `peca_quebrada` mantém o código e passa a significar peça danificada (fissura, lasca, canto quebrado ou peça partida); `peca_faltante` com origem ASTM no grau baixo; `vegetacao` mantida como classe própria do projeto.
+  - **P9 a P11 aprovadas** (registradas na seção 6 da comparação como "aprovadas como propostas"):
+    - trilha de roda (ASTM 11) não vira classe: entra a **tag nova `trilha_roda`**, usada em `afundamento` quando o rebaixo é longitudinal, no caminho da roda;
+    - elevação (ASTM 6) **fora da rotulagem v1**: quase não se distingue numa imagem 2D; vai para a planilha de vistoria e será reavaliada com profundidade (LiDAR, fase 6);
+    - fluência horizontal (ASTM 7) **fora da rotulagem v1**: não vira máscara; será medida como grandeza derivada da grade de peças na fase 4.
+- **Números (com fonte):** limites do grau baixo na v1. Fonte: `guia-rotulagem.md`, tabela "Graus de severidade".
+
+| Classe | Medida | Grau baixo | Origem do limite |
+|---|---|---|---|
+| `afundamento` | Profundidade sob régua de 3 m | intertravado: até 13 mm; paralelepípedo: até 15 mm | 13 mm: ASTM E2840 via manual ABCP (2022); 15 mm: especificações municipais de recebimento de paralelepípedo |
+| `peca_faltante` | Peças contíguas afetadas | 1 peça isolada | ASTM E2840 via manual ABCP (2022) |
+| `peca_quebrada` | Estado da peça | fissura, lasca ou canto quebrado, sem perda de material | ASTM E2840 via manual ABCP (2022) aceita 1 ou 2 peças danificadas sem separação; graus são proposta, a calibrar |
+| `junta_aberta` | Largura da junta | 6 a 10 mm | Limite aceitável de 10 mm: ASTM E2840 via manual ABCP (2022); faixas: publicado para intertravado permeável |
+| `desconfinamento` | Junta e rotação junto ao meio-fio | junta de 6 a 13 mm, sem rotação | ASTM E2840 via manual ABCP (2022) |
+| `desnivel` | Degrau medido com régua de 30 cm | até 6 mm | ASTM E2840 via manual ABCP (2022) |
+| `remendo` | Área em m² | sem grau | |
+| `vegetacao` | Percentual da área | sem grau | |
+
+  - Graus médio e alto: em `afundamento`, `peca_faltante`, `peca_quebrada` e `desnivel` seguem como proposta ou "a calibrar" com a vistoria da fase 1. Em `junta_aberta` (11 a 15 mm; acima de 15 mm) e `desconfinamento` (com rotação; rotação e recalque local) a origem declarada no guia é "publicado para intertravado permeável", **sem referência bibliográfica identificada** no guia nem em `referencias.md`.
+  - Os limites de origem ASTM vêm de fonte secundária (manual ABCP, p. 8 a 11), que dá um limite por defeito sem dizer a qual grau ele corresponde. Fonte: `comparacao-astm-e2840.md`, seção 1.
+- **Hipótese (não testada):** a fluência horizontal pode ser medida pelo desvio do alinhamento das juntas na grade de peças (fase 4). A decisão de hoje só define o tratamento; a viabilidade da medida não foi testada.
+- **Impacto no artigo:**
+  - Seção 3.4 (classes e severidade): 8 classes, tabela de graus com a origem de cada limite, tag `trilha_roda`, mapeamento para a ASTM E2840 (`guia-rotulagem.md`, seção "Mapeamento para a ASTM E2840") e os dois defeitos ASTM fora da v1, com o motivo.
+  - Seção 5 (limitações): `junta_aberta` junta dois defeitos ASTM (4, largura de junta excessiva, e 8, perda de rejunte ou bombeamento). Ao comparar com o PCI ou com levantamentos pela ASTM E2840, isso deve ser declarado: a classe do projeto não separa os dois e é graduada só pela largura, sem a profundidade do rejunte. Elevação também não é rotulada, então a cobertura é de 9 dos 11 defeitos ASTM, sendo 2 deles (4 e 8) fundidos numa só classe, e a fluência horizontal depende da fase 4. Continuam valendo as limitações da entrada de 2026-10-19: fonte secundária, sem Apêndice X1, sem limites para paralelepípedo.
+
 ### 2026-10-20 · Fase 0 · Protocolo de coleta planejado (método, ainda não executado)
 
 - **O que aconteceu:** registro do protocolo de coleta da Fase 0 como **método planejado** (tarefa F0-10). Nada do que está abaixo foi executado em campo. Não há altura nem ângulo de câmera medidos, foto do suporte, ruas escolhidas nem resultado do teste de 10 minutos. Esses dados serão produzidos por F0-03, F0-04, F0-05 e F0-06 e entrarão numa entrada nova, sem reescrever esta. Fonte de todo o conteúdo: `docs/fases/fase-0-preparacao.md` (Passos 2 a 5) e `docs/fases/fase-1-filmagens-vistoria.md` (tabela "Configurações de coleta").
@@ -119,6 +151,7 @@ Estado: kit **não montado**. Marca e modelo da câmera e do celular ainda não 
 - **Hipótese (não testada):** a fluência horizontal pode ser medida pelo desvio do alinhamento das juntas na grade de peças. Candidata a contribuição do artigo; depende da fase 4.
 - **Lacunas:** sem o Apêndice X1 não há graus oficiais nem curvas de dedução, portanto o PCI não pode ser calculado. As duas fontes tratam só de intertravado de concreto (ASTM C936); para o paralelepípedo nenhuma dá limites, e os graus seguem a calibrar com a vistoria da fase 1.
 - **Impacto no artigo:** seção 2 (revisão: ASTM E2840 e manual ABCP); seção 3.4 (classes e severidade, com a origem de cada limite); seção 5 (limitações: limites de fonte secundária, ausência de referência para paralelepípedo, PCI sem verificação de precisão para intertravado, o que também motiva a medição automática e a dupla avaliação da fase 1).
+- Atualização 2026-10-20: propostas decididas, ver entrada de 2026-10-20.
 
 ### 2026-10-19 · Fase 0 · Esquema do banco testado com RLS
 
