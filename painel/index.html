@@ -354,7 +354,7 @@ a { color: var(--vinho); }
     },
     {
      "nome": "Alertas críticos no Security Advisor",
-     "atual": null,
+     "atual": 0,
      "meta": 0,
      "unidade": "alertas",
      "sentido": "menor"
@@ -875,7 +875,7 @@ a { color: var(--vinho); }
    "responsavel": "seguranca-supabase",
    "prazo": "2026-10-28",
    "bloqueada": false,
-   "nota": "Migrações 0001 e 0002 aplicadas no projeto real; 9 de 9 verificações vazias; anon bloqueado via REST. Falta o Eliakim: Security Advisor, desligar cadastro aberto, 2FA, backups, desativar chaves legadas"
+   "nota": "Migrações 0001 a 0003 aplicadas no real; 10 de 10 verificações vazias; Security Advisor com 0 erros. Falta o Eliakim: rerun do Advisor, conferir exposed schemas, desligar cadastro aberto, 2FA, backups, desativar chaves legadas"
   },
   {
    "id": "F0-09",
@@ -1580,6 +1580,14 @@ a { color: var(--vinho); }
  ],
  "ruas": [],
  "historico": [
+  {
+   "data": "2026-10-20",
+   "evento": "Migração 0003 aplicada: auxiliares do RLS movidas para o schema privado e rls_auto_enable fechada; 10 verificações vazias e RPC das funções sem acesso"
+  },
+  {
+   "data": "2026-10-20",
+   "evento": "Security Advisor: 0 errors e 5 warnings (funções security definer expostas na API: rls_auto_enable, eh_membro, pode_revisar, eh_membro_caminho)"
+  },
   {
    "data": "2026-10-20",
    "evento": "Supabase real: 0001 aplicada; revisão achou privilégio excessivo de authenticated na view resumo_passivo, corrigido pela 0002; 9 verificações de segurança vazias"

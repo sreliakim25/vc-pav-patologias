@@ -50,7 +50,7 @@ Regras:
 
 1. **Toda tabela** do schema `public` tem RLS ligado na mesma migração que a cria. A migração [0001_esquema_inicial.sql](../../supabase/migrations/0001_esquema_inicial.sql) segue esse padrão.
 2. Sem política, ninguém acessa (exceto a chave secret). Políticas são escritas para cada operação necessária, e só para `authenticated`.
-3. O acesso é **por obra**: um usuário só vê o que pertence às obras em que é membro. A checagem fica na função `public.eh_membro(obra_id)`.
+3. O acesso é **por obra**: um usuário só vê o que pertence às obras em que é membro. A checagem fica na função `privado.eh_membro(obra_id)` (schema fora da API, migração 0003).
 4. **Escrita de resultados** (inspeções e defeitos) só pela chave secret, no pipeline. O painel não insere defeitos.
 5. **Revisão do engenheiro** entra na tabela `revisoes` (o engenheiro só pode inserir em seu próprio nome, em obras onde tem papel de edição). Um gatilho aplica a revisão ao defeito. Assim o painel nunca precisa de permissão de `update` em `defeitos`.
 6. **Ninguém apaga** pelo painel. Descartar é um status, não um `delete`.

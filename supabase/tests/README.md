@@ -21,14 +21,16 @@ createdb teste
 psql -d teste -v ON_ERROR_STOP=1 -f supabase/tests/simulacao_supabase.sql
 psql -d teste -v ON_ERROR_STOP=1 -f supabase/migrations/0001_esquema_inicial.sql
 psql -d teste -v ON_ERROR_STOP=1 -f supabase/migrations/0002_privilegios_authenticated.sql
+psql -d teste -v ON_ERROR_STOP=1 -f supabase/migrations/0003_funcoes_fora_da_api.sql
 psql -d teste -f supabase/verificar_seguranca.sql
 psql -d teste -f supabase/tests/teste_rls.sql
 ```
 
 ## Projeto real (Supabase, 2026-10-20, PostgreSQL 17.11 + PostGIS 3.3.7)
 
-- Migrações 0001 e 0002 aplicadas pelo SQL, em transação.
-- `verificar_seguranca.sql`: as 9 consultas voltaram vazias (a 9ª foi criada junto com a 0002).
+- Migrações 0001, 0002 e 0003 aplicadas pelo SQL, em transação.
+- `verificar_seguranca.sql`: as 10 consultas voltaram vazias (a 9ª veio com a 0002, a 10ª com a 0003).
+- 0003: auxiliares do RLS no schema `privado`; RPC delas responde 404 (PGRST202); gatilho `ensure_rls` segue ligando o RLS em tabela nova (teste com ROLLBACK).
 - Chave publishable via REST: as 6 tabelas e a view respondem 401 (42501); buckets e objetos não aparecem.
 - `teste_rls.sql` não roda no projeto real (insere dados de teste).
 
