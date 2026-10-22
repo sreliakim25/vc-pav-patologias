@@ -2,7 +2,7 @@
   "projeto": {
     "nome": "Patologias em Pavimento de Paver e Paralelepípedo",
     "fase_atual": 0,
-    "atualizado_em": "2026-10-20",
+    "atualizado_em": "2026-10-21",
     "inicio": "2026-10-20"
   },
   "colunas": [
@@ -545,6 +545,9 @@
       "id": "F0-01",
       "fase": 0,
       "titulo": "Fechar classes e graus no guia de rotulagem v1",
+      "passo": [
+        1
+      ],
       "coluna": "feito",
       "responsavel": "Eliakim + coleta-campo",
       "prazo": "2026-10-27",
@@ -555,6 +558,9 @@
       "id": "F0-02",
       "fase": 0,
       "titulo": "Comprar e comparar com a ASTM E2840",
+      "passo": [
+        1
+      ],
       "coluna": "fazendo",
       "responsavel": "Eliakim",
       "prazo": "2026-10-27",
@@ -565,6 +571,9 @@
       "id": "F0-03",
       "fase": 0,
       "titulo": "Escolher e registrar as 4 ruas do piloto",
+      "passo": [
+        2
+      ],
       "coluna": "a_fazer",
       "responsavel": "Eliakim",
       "prazo": "2026-10-24",
@@ -575,6 +584,9 @@
       "id": "F0-04",
       "fase": 0,
       "titulo": "Montar o kit de campo",
+      "passo": [
+        3
+      ],
       "coluna": "a_fazer",
       "responsavel": "Eliakim",
       "prazo": "2026-10-28",
@@ -585,6 +597,9 @@
       "id": "F0-05",
       "fase": 0,
       "titulo": "Fixar e documentar a configuração da câmera C1",
+      "passo": [
+        4
+      ],
       "coluna": "a_fazer",
       "responsavel": "coleta-campo",
       "prazo": "2026-10-29",
@@ -595,6 +610,9 @@
       "id": "F0-06",
       "fase": 0,
       "titulo": "Teste de 10 minutos aprovado",
+      "passo": [
+        5
+      ],
       "coluna": "a_fazer",
       "responsavel": "Eliakim",
       "prazo": "2026-10-31",
@@ -605,6 +623,9 @@
       "id": "F0-07",
       "fase": 0,
       "titulo": "Autorização escrita para uso das imagens",
+      "passo": [
+        6
+      ],
       "coluna": "a_fazer",
       "responsavel": "Eliakim",
       "prazo": "2026-11-02",
@@ -615,6 +636,9 @@
       "id": "F0-08",
       "fase": 0,
       "titulo": "Criar projeto Supabase com RLS e rodar o Security Advisor",
+      "passo": [
+        7
+      ],
       "coluna": "feito",
       "responsavel": "seguranca-supabase",
       "prazo": "2026-10-28",
@@ -625,6 +649,9 @@
       "id": "F0-09",
       "fase": 0,
       "titulo": "Estrutura de pastas e planilha de vistoria",
+      "passo": [
+        8
+      ],
       "coluna": "revisao",
       "responsavel": "coleta-campo",
       "prazo": "2026-10-24",
@@ -635,6 +662,9 @@
       "id": "F0-10",
       "fase": 0,
       "titulo": "Registrar o método no diário de pesquisa",
+      "passo": [
+        "artigo"
+      ],
       "coluna": "fazendo",
       "responsavel": "redator-artigo",
       "prazo": "2026-11-02",
@@ -645,6 +675,9 @@
       "id": "F0-11",
       "fase": 0,
       "titulo": "Identificar fontes de limites do guia: especificação municipal (15 mm) e intertravado permeável",
+      "passo": [
+        1
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim",
       "prazo": null,
@@ -655,6 +688,9 @@
       "id": "F1-01",
       "fase": 1,
       "titulo": "Planejar passadas por rua e configuração",
+      "passo": [
+        1
+      ],
       "coluna": "backlog",
       "responsavel": "coleta-campo",
       "prazo": "2026-11-23",
@@ -665,6 +701,9 @@
       "id": "F1-02",
       "fase": 1,
       "titulo": "Passadas C1 nas 4 ruas (ida e volta)",
+      "passo": [
+        2
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim",
       "prazo": "2026-11-23",
@@ -675,6 +714,9 @@
       "id": "F1-03",
       "fase": 1,
       "titulo": "Passadas C2 nas 4 ruas",
+      "passo": [
+        3
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim",
       "prazo": "2026-11-23",
@@ -685,6 +727,9 @@
       "id": "F1-04",
       "fase": 1,
       "titulo": "Fotos C3 dos trechos com defeito",
+      "passo": [
+        4
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim",
       "prazo": "2026-11-23",
@@ -695,6 +740,9 @@
       "id": "F1-05",
       "fase": 1,
       "titulo": "Passada C1 com pavimento molhado",
+      "passo": [
+        2
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim",
       "prazo": "2026-11-23",
@@ -705,6 +753,9 @@
       "id": "F1-06",
       "fase": 1,
       "titulo": "Medir 20 peças por rua",
+      "passo": [
+        5
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim",
       "prazo": "2026-11-23",
@@ -715,6 +766,9 @@
       "id": "F1-07",
       "fase": 1,
       "titulo": "Vistoria de 50 defeitos com fotos",
+      "passo": [
+        5
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim",
       "prazo": "2026-11-23",
@@ -725,6 +779,9 @@
       "id": "F1-08",
       "fase": 1,
       "titulo": "Segunda avaliação de grau em 10 defeitos",
+      "passo": [
+        5
+      ],
       "coluna": "backlog",
       "responsavel": "Segundo avaliador",
       "prazo": "2026-11-23",
@@ -735,6 +792,9 @@
       "id": "F1-09",
       "fase": 1,
       "titulo": "Scripts de extração, nitidez e duplicatas",
+      "passo": [
+        6
+      ],
       "coluna": "backlog",
       "responsavel": "coleta-campo",
       "prazo": "2026-11-23",
@@ -745,6 +805,9 @@
       "id": "F1-10",
       "fase": 1,
       "titulo": "Script de anonimização",
+      "passo": [
+        6
+      ],
       "coluna": "backlog",
       "responsavel": "coleta-campo",
       "prazo": "2026-11-23",
@@ -755,6 +818,9 @@
       "id": "F1-11",
       "fase": 1,
       "titulo": "Relatórios de coleta e conferência da amostra",
+      "passo": [
+        7
+      ],
       "coluna": "backlog",
       "responsavel": "coleta-campo",
       "prazo": "2026-11-23",
@@ -765,6 +831,9 @@
       "id": "F1-12",
       "fase": 1,
       "titulo": "Registrar a coleta no diário de pesquisa",
+      "passo": [
+        "artigo"
+      ],
       "coluna": "backlog",
       "responsavel": "redator-artigo",
       "prazo": "2026-11-23",
@@ -775,6 +844,10 @@
       "id": "F2-01",
       "fase": 2,
       "titulo": "Instalar CVAT e criar os projetos",
+      "passo": [
+        1,
+        2
+      ],
       "coluna": "backlog",
       "responsavel": "rotulagem-dataset",
       "prazo": "2026-12-21",
@@ -785,6 +858,9 @@
       "id": "F2-02",
       "fase": 2,
       "titulo": "Script de pré-rótulo com SAM 3",
+      "passo": [
+        3
+      ],
       "coluna": "backlog",
       "responsavel": "rotulagem-dataset",
       "prazo": "2026-12-21",
@@ -795,6 +871,9 @@
       "id": "F2-03",
       "fase": 2,
       "titulo": "Rotular defeitos das 4 ruas",
+      "passo": [
+        4
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim",
       "prazo": "2026-12-21",
@@ -805,6 +884,9 @@
       "id": "F2-04",
       "fase": 2,
       "titulo": "Rotular grade em 150 a 200 imagens",
+      "passo": [
+        5
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim",
       "prazo": "2026-12-21",
@@ -815,6 +897,9 @@
       "id": "F2-05",
       "fase": 2,
       "titulo": "Garantir 20% a 30% de imagens sem defeito",
+      "passo": [
+        6
+      ],
       "coluna": "backlog",
       "responsavel": "rotulagem-dataset",
       "prazo": "2026-12-21",
@@ -825,6 +910,9 @@
       "id": "F2-06",
       "fase": 2,
       "titulo": "Revisão cruzada de 10% e concordância",
+      "passo": [
+        7
+      ],
       "coluna": "backlog",
       "responsavel": "Revisor + rotulagem-dataset",
       "prazo": "2026-12-21",
@@ -835,6 +923,9 @@
       "id": "F2-07",
       "fase": 2,
       "titulo": "Guia de rotulagem v1.1",
+      "passo": [
+        7
+      ],
       "coluna": "backlog",
       "responsavel": "rotulagem-dataset",
       "prazo": "2026-12-21",
@@ -845,6 +936,9 @@
       "id": "F2-08",
       "fase": 2,
       "titulo": "Divisão por rua e exportação YOLO e COCO",
+      "passo": [
+        8
+      ],
       "coluna": "backlog",
       "responsavel": "rotulagem-dataset",
       "prazo": "2026-12-21",
@@ -855,6 +949,9 @@
       "id": "F2-09",
       "fase": 2,
       "titulo": "LEIAME do dataset v1 e registro no diário",
+      "passo": [
+        9
+      ],
       "coluna": "backlog",
       "responsavel": "redator-artigo",
       "prazo": "2026-12-21",
@@ -865,6 +962,9 @@
       "id": "F3-01",
       "fase": 3,
       "titulo": "Ambiente de treino e requirements.txt",
+      "passo": [
+        1
+      ],
       "coluna": "backlog",
       "responsavel": "treino-modelos",
       "prazo": "2027-01-18",
@@ -875,6 +975,9 @@
       "id": "F3-02",
       "fase": 3,
       "titulo": "Linha de base E000",
+      "passo": [
+        2
+      ],
       "coluna": "backlog",
       "responsavel": "treino-modelos",
       "prazo": "2027-01-18",
@@ -885,6 +988,9 @@
       "id": "F3-03",
       "fase": 3,
       "titulo": "Experimentos de defeitos E010, E011, E020, E030",
+      "passo": [
+        3
+      ],
       "coluna": "backlog",
       "responsavel": "treino-modelos",
       "prazo": "2027-01-18",
@@ -895,6 +1001,9 @@
       "id": "F3-04",
       "fase": 3,
       "titulo": "Modelo da grade",
+      "passo": [
+        4
+      ],
       "coluna": "backlog",
       "responsavel": "treino-modelos",
       "prazo": "2027-01-18",
@@ -905,6 +1014,9 @@
       "id": "F3-05",
       "fase": 3,
       "titulo": "Experimentos por configuração (C1, C2, cruzado)",
+      "passo": [
+        5
+      ],
       "coluna": "backlog",
       "responsavel": "treino-modelos",
       "prazo": "2027-01-18",
@@ -915,6 +1027,9 @@
       "id": "F3-06",
       "fase": 3,
       "titulo": "Avaliação única no teste fixo",
+      "passo": [
+        6
+      ],
       "coluna": "backlog",
       "responsavel": "treino-modelos",
       "prazo": "2027-01-18",
@@ -925,6 +1040,9 @@
       "id": "F3-07",
       "fase": 3,
       "titulo": "Figuras de acerto e erro",
+      "passo": [
+        7
+      ],
       "coluna": "backlog",
       "responsavel": "treino-modelos + redator-artigo",
       "prazo": "2027-01-18",
@@ -935,6 +1053,9 @@
       "id": "F3-08",
       "fase": 3,
       "titulo": "Tabela de experimentos atualizada",
+      "passo": [
+        7
+      ],
       "coluna": "backlog",
       "responsavel": "redator-artigo",
       "prazo": "2027-01-18",
@@ -945,6 +1066,9 @@
       "id": "F4-01",
       "fase": 4,
       "titulo": "Análise dos 50 piores erros",
+      "passo": [
+        1
+      ],
       "coluna": "backlog",
       "responsavel": "pos-treino-medicao",
       "prazo": "2027-02-15",
@@ -955,6 +1079,9 @@
       "id": "F4-02",
       "fase": 4,
       "titulo": "Dataset v1.1 e retreino",
+      "passo": [
+        1
+      ],
       "coluna": "backlog",
       "responsavel": "rotulagem-dataset + treino-modelos",
       "prazo": "2027-02-15",
@@ -965,6 +1092,9 @@
       "id": "F4-03",
       "fase": 4,
       "titulo": "Limiares por classe",
+      "passo": [
+        2
+      ],
       "coluna": "backlog",
       "responsavel": "pos-treino-medicao",
       "prazo": "2027-02-15",
@@ -975,6 +1105,9 @@
       "id": "F4-04",
       "fase": 4,
       "titulo": "Módulo da grade e homografia",
+      "passo": [
+        3
+      ],
       "coluna": "backlog",
       "responsavel": "pos-treino-medicao",
       "prazo": "2027-02-15",
@@ -985,6 +1118,9 @@
       "id": "F4-05",
       "fase": 4,
       "titulo": "Módulo de medidas",
+      "passo": [
+        4
+      ],
       "coluna": "backlog",
       "responsavel": "pos-treino-medicao",
       "prazo": "2027-02-15",
@@ -995,6 +1131,9 @@
       "id": "F4-06",
       "fase": 4,
       "titulo": "Comparação com a vistoria de campo",
+      "passo": [
+        5
+      ],
       "coluna": "backlog",
       "responsavel": "pos-treino-medicao",
       "prazo": "2027-02-15",
@@ -1005,6 +1144,9 @@
       "id": "F4-07",
       "fase": 4,
       "titulo": "Regras de severidade e kappa",
+      "passo": [
+        6
+      ],
       "coluna": "backlog",
       "responsavel": "pos-treino-medicao",
       "prazo": "2027-02-15",
@@ -1015,6 +1157,9 @@
       "id": "F4-08",
       "fase": 4,
       "titulo": "Rastreamento e melhor vista",
+      "passo": [
+        7
+      ],
       "coluna": "backlog",
       "responsavel": "pos-treino-medicao",
       "prazo": "2027-02-15",
@@ -1025,6 +1170,9 @@
       "id": "F4-09",
       "fase": 4,
       "titulo": "Exportação ONNX e pipeline de ponta a ponta",
+      "passo": [
+        8
+      ],
       "coluna": "backlog",
       "responsavel": "pos-treino-medicao",
       "prazo": "2027-02-15",
@@ -1035,6 +1183,9 @@
       "id": "F4-10",
       "fase": 4,
       "titulo": "Relatório de medição para o artigo",
+      "passo": [
+        "artigo"
+      ],
       "coluna": "backlog",
       "responsavel": "redator-artigo",
       "prazo": "2027-02-15",
@@ -1045,6 +1196,9 @@
       "id": "F5-01",
       "fase": 5,
       "titulo": "Escolher a obra e combinar a rotina",
+      "passo": [
+        1
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim",
       "prazo": "2027-04-12",
@@ -1055,6 +1209,9 @@
       "id": "F5-02",
       "fase": 5,
       "titulo": "Checklist de segurança completo",
+      "passo": [
+        2
+      ],
       "coluna": "backlog",
       "responsavel": "seguranca-supabase",
       "prazo": "2027-04-12",
@@ -1065,6 +1222,9 @@
       "id": "F5-03",
       "fase": 5,
       "titulo": "Vistoria cautelar das valas novas",
+      "passo": [
+        3
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim",
       "prazo": "2027-04-12",
@@ -1075,6 +1235,9 @@
       "id": "F5-04",
       "fase": 5,
       "titulo": "Módulo de envio ao Supabase",
+      "passo": [
+        4
+      ],
       "coluna": "backlog",
       "responsavel": "piloto-painel",
       "prazo": "2027-04-12",
@@ -1085,6 +1248,9 @@
       "id": "F5-05",
       "fase": 5,
       "titulo": "Painel da obra (login, mapa, ficha, revisão)",
+      "passo": [
+        5
+      ],
       "coluna": "backlog",
       "responsavel": "piloto-painel",
       "prazo": "2027-04-12",
@@ -1095,6 +1261,9 @@
       "id": "F5-06",
       "fase": 5,
       "titulo": "Relatório semanal",
+      "passo": [
+        6
+      ],
       "coluna": "backlog",
       "responsavel": "piloto-painel",
       "prazo": "2027-04-12",
@@ -1105,6 +1274,9 @@
       "id": "F5-07",
       "fase": 5,
       "titulo": "Exportação de correções como rótulo",
+      "passo": [
+        7
+      ],
       "coluna": "backlog",
       "responsavel": "piloto-painel",
       "prazo": "2027-04-12",
@@ -1115,6 +1287,9 @@
       "id": "F5-08",
       "fase": 5,
       "titulo": "Medição de tempo antes e depois",
+      "passo": [
+        8
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim",
       "prazo": "2027-04-12",
@@ -1125,6 +1300,9 @@
       "id": "F5-09",
       "fase": 5,
       "titulo": "Trabalho técnico para congresso",
+      "passo": [
+        "artigo"
+      ],
       "coluna": "backlog",
       "responsavel": "redator-artigo",
       "prazo": "2027-04-12",
@@ -1135,6 +1313,9 @@
       "id": "F5-10",
       "fase": 5,
       "titulo": "Rotina de backup do Supabase antes de subir dado real",
+      "passo": [
+        2
+      ],
       "coluna": "backlog",
       "responsavel": "seguranca-supabase",
       "prazo": null,
@@ -1145,6 +1326,9 @@
       "id": "F6-01",
       "fase": 6,
       "titulo": "Script de aprendizado ativo",
+      "passo": [
+        1
+      ],
       "coluna": "backlog",
       "responsavel": "evolucao-escala",
       "prazo": "2027-10-11",
@@ -1155,6 +1339,9 @@
       "id": "F6-02",
       "fase": 6,
       "titulo": "Primeiro ciclo mensal de retreino",
+      "passo": [
+        1
+      ],
       "coluna": "backlog",
       "responsavel": "evolucao-escala + treino-modelos",
       "prazo": "2027-10-11",
@@ -1165,6 +1352,9 @@
       "id": "F6-03",
       "fase": 6,
       "titulo": "Novas ruas e tipos de peça",
+      "passo": [
+        2
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim + rotulagem-dataset",
       "prazo": "2027-10-11",
@@ -1175,6 +1365,9 @@
       "id": "F6-04",
       "fase": 6,
       "titulo": "Avaliação em outra cidade",
+      "passo": [
+        2
+      ],
       "coluna": "backlog",
       "responsavel": "evolucao-escala",
       "prazo": "2027-10-11",
@@ -1185,6 +1378,9 @@
       "id": "F6-05",
       "fase": 6,
       "titulo": "Profundidade por drone",
+      "passo": [
+        3
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim + evolucao-escala",
       "prazo": "2027-10-11",
@@ -1195,6 +1391,9 @@
       "id": "F6-06",
       "fase": 6,
       "titulo": "Profundidade por LiDAR do celular",
+      "passo": [
+        3
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim",
       "prazo": "2027-10-11",
@@ -1205,6 +1404,9 @@
       "id": "F6-07",
       "fase": 6,
       "titulo": "Teste da curvatura das juntas",
+      "passo": [
+        3
+      ],
       "coluna": "backlog",
       "responsavel": "pos-treino-medicao",
       "prazo": "2027-10-11",
@@ -1215,6 +1417,9 @@
       "id": "F6-08",
       "fase": 6,
       "titulo": "Dataset no Zenodo com DOI",
+      "passo": [
+        5
+      ],
       "coluna": "backlog",
       "responsavel": "evolucao-escala + redator-artigo",
       "prazo": "2027-10-11",
@@ -1225,6 +1430,9 @@
       "id": "F6-09",
       "fase": 6,
       "titulo": "Pesos e card do modelo no Hugging Face",
+      "passo": [
+        5
+      ],
       "coluna": "backlog",
       "responsavel": "evolucao-escala",
       "prazo": "2027-10-11",
@@ -1235,6 +1443,9 @@
       "id": "F6-10",
       "fase": 6,
       "titulo": "Demonstração pública",
+      "passo": [
+        5
+      ],
       "coluna": "backlog",
       "responsavel": "evolucao-escala",
       "prazo": "2027-10-11",
@@ -1245,6 +1456,9 @@
       "id": "F7-01",
       "fase": 7,
       "titulo": "Tabela de trechos a partir do OpenStreetMap",
+      "passo": [
+        1
+      ],
       "coluna": "backlog",
       "responsavel": "gemeo-digital",
       "prazo": "2028-04-30",
@@ -1255,6 +1469,9 @@
       "id": "F7-02",
       "fase": 7,
       "titulo": "Casamento de trajeto",
+      "passo": [
+        2
+      ],
       "coluna": "backlog",
       "responsavel": "gemeo-digital",
       "prazo": "2028-04-30",
@@ -1265,6 +1482,9 @@
       "id": "F7-03",
       "fase": 7,
       "titulo": "Identidade persistente dos defeitos",
+      "passo": [
+        3
+      ],
       "coluna": "backlog",
       "responsavel": "gemeo-digital",
       "prazo": "2028-04-30",
@@ -1275,6 +1495,9 @@
       "id": "F7-04",
       "fase": 7,
       "titulo": "Tabelas de valas e recomposições",
+      "passo": [
+        4
+      ],
       "coluna": "backlog",
       "responsavel": "gemeo-digital + seguranca-supabase",
       "prazo": "2028-04-30",
@@ -1285,6 +1508,9 @@
       "id": "F7-05",
       "fase": 7,
       "titulo": "Associação defeito e vala",
+      "passo": [
+        4
+      ],
       "coluna": "backlog",
       "responsavel": "gemeo-digital",
       "prazo": "2028-04-30",
@@ -1295,6 +1521,9 @@
       "id": "F7-06",
       "fase": 7,
       "titulo": "Indicadores do gêmeo no painel",
+      "passo": [
+        5
+      ],
       "coluna": "backlog",
       "responsavel": "gemeo-digital",
       "prazo": "2028-04-30",
@@ -1305,6 +1534,9 @@
       "id": "F7-07",
       "fase": 7,
       "titulo": "Modelo de previsão",
+      "passo": [
+        6
+      ],
       "coluna": "backlog",
       "responsavel": "gemeo-digital",
       "prazo": "2028-04-30",
@@ -1315,6 +1547,9 @@
       "id": "F7-08",
       "fase": 7,
       "titulo": "Ordem de serviço automática e baixa",
+      "passo": [
+        7
+      ],
       "coluna": "backlog",
       "responsavel": "gemeo-digital",
       "prazo": "2028-04-30",
@@ -1325,6 +1560,9 @@
       "id": "F7-09",
       "fase": 7,
       "titulo": "3D dos trechos críticos",
+      "passo": [
+        8
+      ],
       "coluna": "backlog",
       "responsavel": "Eliakim + gemeo-digital",
       "prazo": "2028-04-30",
@@ -1335,6 +1573,9 @@
       "id": "F7-10",
       "fase": 7,
       "titulo": "Artigo internacional com o gêmeo",
+      "passo": [
+        "artigo"
+      ],
       "coluna": "backlog",
       "responsavel": "redator-artigo",
       "prazo": "2028-04-30",
@@ -1344,6 +1585,10 @@
   ],
   "ruas": [],
   "historico": [
+    {
+      "data": "2026-10-21",
+      "evento": "Painel: tema próprio do projeto, detalhes da tarefa ao clicar no cartão (campo passo liga cada tarefa ao passo do documento da fase) e publicação na Vercel."
+    },
     {
       "data": "2026-10-20",
       "evento": "Fontes dos limites de 15 mm (paralelepípedo) e de intertravado permeável registradas como lacuna (F0-11)"
