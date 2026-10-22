@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;600;700&display=swap">
 <style>
-/* Conceito: prancheta de vistoria. Faixa grafite (asfalto) no topo, fundo concreto, azul-petróleo para estrutura e terracota (cor de paver) para destaque. */
+/* Conceito: prancheta de vistoria. Faixa azul-petróleo no topo, fundo concreto, azul-petróleo para estrutura e terracota (cor de paver) para destaque. */
 :root {
   --papel: #F4F5F3;
   --papel-fundo: #E6E9E6;
@@ -21,9 +21,9 @@
   --primaria: #1D4F63;
   --acento: #C8692B;
   --acento-texto: #9A4A15;
-  --faixa: #22343D;
+  --faixa: #1D4F63;
   --faixa-texto: #F4F5F3;
-  --faixa-suave: #B9C6CC;
+  --faixa-suave: #C3DCE5;
   --ok: #2F7A4B;
   --alerta: #B45309;
   --critico: #B3261E;
@@ -36,16 +36,16 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --papel: #14191C; --papel-fundo: #1B2125; --cartao: #20272B; --tinta: #E8ECEE; --tinta-suave: #A3AEB5;
-    --linha: #323C42; --primaria: #7FB8CF; --acento: #E08A4F; --acento-texto: #F0A06A; --faixa: #0F1A20;
-    --faixa-texto: #E8ECEE; --faixa-suave: #9FB2BB; --ok: #7FBF8E; --alerta: #F0A04B; --critico: #F2867B;
+    --linha: #323C42; --primaria: #7FB8CF; --acento: #E08A4F; --acento-texto: #F0A06A; --faixa: #1A4A5C;
+    --faixa-texto: #E8ECEE; --faixa-suave: #B5D2DD; --ok: #7FBF8E; --alerta: #F0A04B; --critico: #F2867B;
     --sombra: 0 18px 48px rgba(0, 0, 0, 0.6);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
   --papel: #14191C; --papel-fundo: #1B2125; --cartao: #20272B; --tinta: #E8ECEE; --tinta-suave: #A3AEB5;
-  --linha: #323C42; --primaria: #7FB8CF; --acento: #E08A4F; --acento-texto: #F0A06A; --faixa: #0F1A20;
-  --faixa-texto: #E8ECEE; --faixa-suave: #9FB2BB; --ok: #7FBF8E; --alerta: #F0A04B; --critico: #F2867B;
+  --linha: #323C42; --primaria: #7FB8CF; --acento: #E08A4F; --acento-texto: #F0A06A; --faixa: #1A4A5C;
+  --faixa-texto: #E8ECEE; --faixa-suave: #B5D2DD; --ok: #7FBF8E; --alerta: #F0A04B; --critico: #F2867B;
   --sombra: 0 18px 48px rgba(0, 0, 0, 0.6);
   color-scheme: dark;
 }
