@@ -58,3 +58,7 @@ Thumbs.db
 
 # Normas e manuais de terceiros (direitos autorais): ficam só na máquina local
 docs/normas/
+
+# Vercel: vínculo local do projeto
+.vercel
+.env*

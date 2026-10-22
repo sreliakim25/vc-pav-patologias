@@ -1,0 +1,3 @@
+# Só o painel vai para a Vercel; o resto do repositório (docs, dados, .env, normas) fica de fora
+/*
+!/painel
