@@ -115,7 +115,7 @@ python3 -m http.server 8000
 # abra http://localhost:8000/painel/
 ```
 
-Ou publique com GitHub Pages (Settings > Pages > Branch `main`, pasta raiz) e acesse `https://sreliakim25.github.io/vc-pav-patologias/painel/`.
+Versão publicada: **https://vc-pav-patologias.vercel.app** (Vercel, pasta `painel`, atualiza a cada push na `main`; mostra a cópia embutida do último commit, então rode `python3 painel/embutir_dados.py` antes de commitar).
 
 ### 3. Configurar o ambiente (a partir da fase 1)
 
