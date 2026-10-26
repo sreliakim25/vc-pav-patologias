@@ -55,6 +55,7 @@ Para paralelepípedo, a grade é irregular (pedras de 16 a 22 cm). Use a **médi
    - **comprimento e largura** pelo retângulo mínimo da máscara projetada;
    - **peças afetadas**: quantas células da grade a máscara cobre em mais de 50%;
    - **largura de junta**: largura média da máscara de junta dentro da área do defeito, em mm.
+     > Alerta do chanfro (guia v2, P18): a norma gradua a junta pela largura **real**, descontado o chanfro da peça (ASTM E2840, X1.4.3). Na imagem, a abertura aparente inclui o chanfro e **superestima a largura**. Estime o viés comparando com o paquímetro da vistoria (Passo 5) e corrija antes de aplicar os graus de 6, 10 e 13 mm.
 3. **Profundidade** só quando houver 3D (LiDAR ou drone, fase 6). Sem 3D, registre "não medida" e declare isso no artigo.
 
 ### Passo 5. Comparar com a vistoria de campo
@@ -64,11 +65,17 @@ Para paralelepípedo, a grade é irregular (pedras de 16 a 22 cm). Use a **médi
    - erro médio absoluto e erro percentual de área, comprimento e largura;
    - acerto exato e erro de uma peça na contagem de peças afetadas;
    - gráfico de Bland-Altman para a área.
-3. Faça a comparação separadamente para as configurações C1, C2 e C3, e para intertravado e paralelepípedo.
+3. **Meta de aceitação da medição** (guia v2, P29). O projeto adota como critério a tolerância que a ASTM E2840 dá para o inspetor que remede em campo (seção 8.1):
+   - **tipo de defeito** identificado corretamente em **95%** dos defeitos medidos;
+   - **medida linear** (comprimento, largura, extensão de borda) dentro de **10%** da remedição em campo;
+   - **área** dentro de **20%** da remedição em campo.
+
+   Uma medida conta como aceita quando o erro daquele defeito fica dentro da tolerância; reporte o percentual de defeitos aceitos em cada medida. A norma fixa essas tolerâncias para pessoas; usá-las para o sistema automático é escolha do projeto e deve ser declarada assim no artigo.
+4. Faça a comparação separadamente para as configurações C1, C2 e C3, e para intertravado e paralelepípedo.
 
 ### Passo 6. Classificar a severidade
 
-1. Aplique as regras de grau do guia de rotulagem sobre as medidas (ex.: junta acima de 1,5 cm = alta).
+1. Aplique as regras de grau do guia de rotulagem sobre as medidas (ex.: junta com largura real acima de 13 mm = alta, guia v2).
 2. Compare com a nota do engenheiro:
    - acurácia;
    - **kappa ponderado** sistema contra avaliador 1;
@@ -116,6 +123,7 @@ Para paralelepípedo, a grade é irregular (pedras de 16 a 22 cm). Use a **médi
 ## Portão para avançar à fase 5 (metas do piloto, ajustáveis)
 
 - [ ] Erro médio de **área abaixo de 20%** na configuração C1.
+- [ ] Meta de aceitação da medição na C1 (ASTM E2840, 8.1): **tipo certo em 95%** dos defeitos, **medida linear dentro de 10%** e **área dentro de 20%** da remedição em campo. A norma não diz em que proporção dos defeitos as medidas devem ficar dentro da tolerância: definir esse percentual antes da F4-06.
 - [ ] Contagem de peças afetadas **exata na maioria dos casos** (meta: 60% exata e 90% com erro de até uma peça).
 - [ ] **Kappa de severidade** do sistema próximo ao kappa entre os dois avaliadores humanos.
 - [ ] Pipeline de ponta a ponta roda numa passada nova sem intervenção manual.
@@ -125,6 +133,9 @@ Para paralelepípedo, a grade é irregular (pedras de 16 a 22 cm). Use a **médi
 | Indicador | Meta |
 |---|---|
 | Erro médio de área (C1) | abaixo de 20% |
+| Tipo de defeito correto (C1) | 95% |
+| Defeitos com medida linear dentro de 10% (C1) | percentual mínimo a definir pelo Eliakim (a norma não fixa) |
+| Defeitos com área dentro de 20% (C1) | percentual mínimo a definir pelo Eliakim (a norma não fixa) |
 | Peças afetadas: acerto exato | 60% |
 | Peças afetadas: erro de até 1 | 90% |
 | Kappa sistema x avaliador | perto do kappa humano |

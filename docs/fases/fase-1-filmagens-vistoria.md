@@ -6,7 +6,7 @@
 | **Duração estimada** | 2 a 3 semanas |
 | **Subagente principal** | [`coleta-campo`](../../.claude/agents/coleta-campo.md) |
 | **Subagentes de apoio** | [`redator-artigo`](../../.claude/agents/redator-artigo.md) |
-| **Entradas** | Kit testado, guia de rotulagem v1, ruas definidas, planilha de vistoria vazia |
+| **Entradas** | Kit testado, guia de rotulagem v2, ruas definidas, planilha de vistoria vazia |
 | **Saídas** | Quadros filtrados e anonimizados por rua e configuração, trilhas GPS, planilha de vistoria com 50 defeitos medidos e fotografados, scripts de `src/coleta/` e `src/anonimizacao/` |
 
 ---
@@ -38,7 +38,8 @@ Sem a medida de campo não há como saber se o sistema mede certo. E sem várias
    - 1 passada C2 por rua;
    - 1 caminhada C3 nos trechos com defeitos;
    - 1 passada C1 extra com pavimento molhado em pelo menos uma rua de cada tipo (teste de robustez).
-3. Registre o plano como tarefas no kanban (o orquestrador faz isso com `/proxima-tarefa`).
+3. **Ordem do dia (guia v2, P27):** faça todas as passadas C1 e C2 da rua (Passos 2 e 3) **antes** de marcar o pavimento com giz, tinta ou etiqueta. Depois vêm a vistoria com marcação (Passo 5) e as fotos C3 (Passo 4), que podem mostrar as marcas. Se uma passada C1 ou C2 tiver de ser refeita depois da marcação, espere as marcas saírem ou avise na anotação da passada, para que as imagens recebam a tag `marca_campo`.
+4. Registre o plano como tarefas no kanban (o orquestrador faz isso com `/proxima-tarefa`).
 
 ### Passo 2. Filmar com a configuração C1
 
@@ -58,23 +59,71 @@ Sem a medida de campo não há como saber se o sistema mede certo. E sem várias
 1. A pé, com o celular apontado para baixo, a cerca de 1,2 a 1,5 m do chão.
 2. Uma foto por defeito, com a **régua graduada visível ao lado** e o defeito inteiro no quadro.
 3. Uma foto de um trecho em bom estado a cada 20 m, para servir de imagem sem defeito.
+4. As fotos C3 tiradas depois da marcação do Passo 5 mostram giz, números ou tinta. Isso é esperado (o número ajuda a achar o defeito na fase 4), mas essas imagens recebem a tag `marca_campo` na rotulagem.
 
 ### Passo 5. Fazer a vistoria de campo
+
+Os graus e as medidas seguem o [guia de rotulagem v2](../guias/guia-rotulagem.md), que usa o Apêndice X1 da ASTM E2840-11. As seções da norma citadas abaixo são as do apêndice X2 (orientações de vistoria), salvo indicação.
+
+**Kit de medida (norma, P26):**
+
+| Item | Para quê | Fonte |
+|---|---|---|
+| Régua de 3 m de tubo de alumínio (a norma sugere 40 mm de diâmetro interno, Schedule 40; é leve e não verga) | Afundamento, trilha de roda e elevação | X2.5, X1.2.3 |
+| Prancheta ou régua rígida de 0,3 m | Desnível entre peças | X1.5.3, X2.1.1.3 |
+| Cunha graduada ou outro dispositivo calibrado, **aferido antes da campanha** | Dimensão vertical sob as réguas | X2.6 |
+| Régua metálica fina, com o zero na ponta | Profundidade da perda de rejunte | X1.8.3 |
+| Paquímetro | Largura real da junta | X1.4.3 |
+| Roda odométrica com resolução de 30 mm, ou trena | Comprimento, largura e extensão de borda | X2.2.1 |
+| Linha de 15 m | Só se a fluência horizontal for medida em campo | X1.7.3 |
+| Giz, giz de cera ou tinta spray, e uma faca | Marcar onde a régua toca o pavimento e o contorno de cada grau | X2.9, X2.11 |
+
+**Ordem:** a vistoria só começa depois das passadas C1 e C2 da rua (Passo 1, item 3).
 
 Para cada rua:
 
 1. **Medir 20 peças** com a trena (comprimento e largura). Registre a média e o desvio. Essa é a referência de escala da rua.
-2. Escolher defeitos variados até completar **50 no total**, cobrindo todas as classes e os três graus. Para cada um:
+2. **Dividir a rua em unidades de amostra** de cerca de 225 m² ± 90 m² (norma, 2.1.7), numeradas a partir do início da rua, com marcas de giz no meio-fio (X2.11). O número da unidade vai na coluna `unidade_amostra`. Defeito na divisa entre duas unidades é registrado na **borda esquerda e frontal** da unidade (X2.3), para não ser contado duas vezes.
+3. Escolher defeitos variados até completar **50 no total**, cobrindo todas as classes e os três graus. Para cada um:
    - numerar com giz ou etiqueta temporária (o número aparece na foto);
-   - medir comprimento e largura com a trena;
-   - medir a **profundidade** com a régua de 3 m e a cunha graduada (afundamentos);
+   - **marcar com giz** os pontos onde a régua toca o pavimento (deslize a faca sob a régua para achar o ponto) e o contorno do defeito (X2.9); se houver trechos de graus diferentes, marcar o contorno de cada grau (X2.13);
+   - medir comprimento e largura com a trena ou a roda, percorrendo o defeito: **nunca estimar comprimento** (X2.4); a roda não pode andar mais rápido que o passo (X2.2.2);
+   - medir a **profundidade** com a régua de 3 m e a cunha (afundamentos, `profundidade_mm`); acima de 3 m de extensão, usar linha esticada (X1.2.3); na trilha de roda, a régua vai **atravessada** na trilha (X1.11.3);
+   - medir o **desnível** entre peças vizinhas com a régua de 0,3 m (`desnivel_mm`, separado de `profundidade_mm`);
+   - medir a **largura real da junta** com o paquímetro, descontando o chanfro da peça (X1.4.3) (`largura_junta_mm`);
+   - medir a **profundidade da perda de rejunte** com a régua metálica fina, a partir do **fundo do chanfro** até tocar a areia (X1.8.3) (`profundidade_rejunte_mm`), mesmo quando a junta não estiver larga;
+   - no desconfinamento, medir a **extensão de borda** afetada em metros (`extensao_borda_m`; a quantidade da norma é linear, X1.3.3);
    - contar as **peças afetadas**;
-   - medir a **largura da junta** com o paquímetro (juntas abertas);
+   - anotar a **área afetada** em m² (`area_m2`), a partir do contorno marcado;
+   - em remendo e peça faltante, anotar se o **conforto ao rodar** é afetado (`conforto_afetado`: sim ou não);
+   - anotar se a superfície está seca ou molhada (`superficie`);
    - fotografar com a régua graduada no chão;
-   - anotar a coordenada (o GPS do celular serve);
-   - dar o **grau de severidade** conforme o guia.
-3. Em **10 desses defeitos**, um segundo avaliador repete a nota de grau **sem ver a primeira**. Essa concordância entre pessoas é o teto realista para o modelo.
-4. Preencha a planilha `dados/vistoria/vistoria.csv` no mesmo dia.
+   - anotar a coordenada (o GPS do celular serve para localizar, mas **não substitui a trena** na medida do defeito);
+   - dar o **grau de severidade** conforme o guia v2, **a partir da medida**, não da aparência.
+4. **Não estimar profundidade pela sombra nem pela umidade:** sombra sob a régua de manhã cedo e no fim da tarde, pavimento molhado e mancha exageram o desnível aparente. Medir sempre (X2.7, X2.8). A menor diferença de cota mensurável é 3 mm (X2.1.1.4): abaixo disso, não registrar.
+5. **Uma linha da planilha por defeito e por grau:** defeitos sobrepostos na mesma área têm uma linha cada, no seu grau (X2.1.1.1); um mesmo defeito com trechos de graus diferentes tem uma linha por grau (X2.13). Defeito dentro de remendo não tem linha própria: ele só eleva o grau do remendo (X2.1.1.2).
+6. **Defeitos fora da rotulagem também entram na planilha**, na coluna `classe`: `elevacao` (altura sob a régua de 3 m apoiada na área não elevada, em `altura_elevacao_mm`, X1.6.3) e `fluencia` (desvio do centro da linha de 15 m até o alinhamento de juntas mais próximo, em `desvio_linha_mm`, X1.7.3), se forem medidos.
+7. **Pavimento muito degradado:** faça estimativa cuidadosa, sem deixar de registrar cada tipo e grau, conferindo o relevo com a régua por amostragem; limite a cerca de 20 minutos por unidade de amostra (X2.14). Se perder a conta numa unidade, recomece a unidade (X2.10).
+8. Em **10 desses defeitos**, um segundo avaliador repete a nota de grau **sem ver a primeira**. Essa concordância entre pessoas é o teto realista para o modelo.
+9. Preencha a planilha `dados/vistoria/vistoria.csv` no mesmo dia, a partir do modelo [modelo-vistoria.csv](../guias/modelo-vistoria.csv).
+
+**Colunas da planilha (guia v2):**
+
+| Coluna | Conteúdo |
+|---|---|
+| `unidade_amostra` | Número da unidade de amostra da rua (item 2) |
+| `classe` | Código do guia (`afundamento`, `peca_faltante`...) ou `elevacao` e `fluencia`, que não são rotulados |
+| `codigo_astm` | Número do defeito na norma (1 a 11), conforme [classes.json](../guias/classes.json); afundamento com trilha de roda é 11 |
+| `superficie` | `seco` ou `molhado` |
+| `area_m2` | Área afetada, pelo contorno marcado |
+| `extensao_borda_m` | Só desconfinamento: metros lineares de borda |
+| `profundidade_mm` | Afundamento e trilha de roda, régua de 3 m |
+| `desnivel_mm` | Desnível entre peças, régua de 0,3 m |
+| `profundidade_rejunte_mm` | Perda de rejunte, a partir do fundo do chanfro |
+| `altura_elevacao_mm` | Só elevação |
+| `desvio_linha_mm` | Só fluência, linha de 15 m |
+| `largura_junta_mm` | Largura real da junta, descontado o chanfro |
+| `conforto_afetado` | `sim` ou `nao` (remendo e peça faltante) |
 
 > Segurança: use cones e colete, e nunca meça em faixa com tráfego sem sinalização.
 

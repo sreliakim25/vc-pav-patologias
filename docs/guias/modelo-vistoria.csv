@@ -1,1 +1,1 @@
-id_defeito,data,rua,classe,latitude,longitude,comprimento_cm,largura_cm,profundidade_mm,pecas_afetadas,largura_junta_mm,grau_avaliador_1,grau_avaliador_2,foto,observacoes
+id_defeito,data,rua,unidade_amostra,classe,codigo_astm,latitude,longitude,superficie,comprimento_cm,largura_cm,area_m2,extensao_borda_m,profundidade_mm,desnivel_mm,profundidade_rejunte_mm,altura_elevacao_mm,desvio_linha_mm,pecas_afetadas,largura_junta_mm,conforto_afetado,grau_avaliador_1,grau_avaliador_2,foto,observacoes

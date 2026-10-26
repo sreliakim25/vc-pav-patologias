@@ -333,6 +333,10 @@
         {
           "item": "Pipeline de ponta a ponta numa passada nova",
           "ok": false
+        },
+        {
+          "item": "Medição na C1 dentro da tolerância ASTM 8.1: tipo certo em 95%, linear até 10%, área até 20% (percentual mínimo a definir)",
+          "ok": false
         }
       ],
       "indicadores": [
@@ -376,6 +380,13 @@
           "atual": null,
           "meta": 0.85,
           "unidade": "",
+          "sentido": "maior"
+        },
+        {
+          "nome": "Tipo de defeito correto (C1)",
+          "atual": null,
+          "meta": 95,
+          "unidade": "%",
           "sentido": "maior"
         }
       ]
@@ -561,11 +572,11 @@
       "passo": [
         1
       ],
-      "coluna": "revisao",
+      "coluna": "feito",
       "responsavel": "Eliakim",
       "prazo": "2026-10-27",
       "bloqueada": false,
-      "nota": "Norma completa lida em 2026-10-26 (X1 graus, X2 vistoria, X3 curvas de dedução completas). Seção 7 de comparacao-astm-e2840.md com propostas P13 a P30, aguardando decisão do Eliakim. Cópia lida é E2840-11 sem a marca R2019: conferir com a oficial antes do artigo (P30)."
+      "nota": "Decisões P13 a P30 aceitas em 2026-10-26 (P14 opção B: paralelepípedo usa a escala da ASTM como extrapolação; 15 mm só como referência). Guia de rotulagem v2, classes.json com código ASTM e unidade PCI, planilha com 25 colunas, kit e protocolo no Passo 5 da fase 1, meta P29 na fase 4. Antes do artigo: conferir os números com a cópia oficial (P30)."
     },
     {
       "id": "F0-03",
@@ -1585,6 +1596,10 @@
   ],
   "ruas": [],
   "historico": [
+    {
+      "data": "2026-10-26",
+      "evento": "F0-02 feita: Eliakim aceitou P13 a P30 (P14 opção B). Guia de rotulagem v2 com graus da ASTM E2840 X1 no intertravado e extrapolação provisória no paralelepípedo; meta de medição da fase 4 pela tolerância da seção 8.1."
+    },
     {
       "data": "2026-10-26",
       "evento": "F0-02 para revisão: ASTM E2840 completa comparada com o guia v1 (11 defeitos com graus oficiais, curvas de dedução do PCI completas no Apêndice X3). 18 propostas (P13 a P30) aguardam decisão do Eliakim; F0-11 segue aberta para os 15 mm do paralelepípedo."

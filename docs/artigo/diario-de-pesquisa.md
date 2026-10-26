@@ -14,6 +14,40 @@ Registro cronológico de tudo que tem valor para o artigo: decisões de método,
 
 ---
 
+### 2026-10-26 · Fase 0 · Guia de rotulagem v2 (decisões P13 a P30)
+
+- **O que aconteceu:** o Eliakim aceitou as 18 propostas P13 a P30 em 2026-10-26, com P14 na opção B. As decisões foram aplicadas no `docs/guias/guia-rotulagem.md`, agora v2. Fontes: `docs/guias/comparacao-astm-e2840.md`, seção 7.5, coluna "Decisão (2026-10-26)", e `guia-rotulagem.md` v2. Esta entrada encerra o estado "pendentes de decisão" das propostas P13 a P30 registrado na entrada anterior, de mesma data.
+- **Decisões no intertravado (graus da ASTM E2840, Apêndice X1):**
+
+| Classe ou tag | Medida | Graus baixo / médio / alto | Origem |
+|---|---|---|---|
+| `afundamento` | Profundidade sob régua de 3 m | limites de 5, 13 e 25 mm | X1.2.4 (P13) |
+| tag `trilha_roda` | Profundidade sob régua transversal | limites de 6, 13 e 25 mm | X1.11.4 (P15) |
+| `peca_faltante` | Peças contíguas ausentes | 1; 2 a 9; 10 ou mais | X1.9.4 (P16) |
+| `junta_aberta` | Largura real da junta, sem o chanfro | limites de 6, 10 e 13 mm | X1.4 (P18) |
+| `desnivel` | Degrau com régua de 0,3 m | limites de 3, 6 e 10 mm | X1.5 (P21) |
+| `remendo` | Estado do remendo e conforto | três graus | X1.10.4 (P22) |
+| `peca_quebrada` | Estado da peça | três graus | X1.1.4 (P17) |
+| `desconfinamento` | Junta e rotação junto à contenção | três graus | X1.3.4 (P20) |
+
+  A leitura exata de cada faixa (limite inferior e superior de cada grau) está na tabela de graus do `guia-rotulagem.md` v2; a tabela acima resume os limites citados na decisão.
+- **Paralelepípedo (P14, opção B):** usa a mesma escala do intertravado como **extrapolação** da ASTM E2840, que só cobre peças de concreto. A escala será calibrada com a vistoria da fase 1. O limite municipal de 15 mm (P1, ainda sem fonte, pendência F0-11) passa a ser só referência de comparação. Motivo: uma escala única e o cálculo do PCI nas duas superfícies. **Isto é proposta e hipótese, não resultado.**
+- **Divergência deliberada da norma:** em `peca_faltante`, o grau alto usa "**ou** conforto afetado"; a norma diz "**e**". O artigo deve declarar essa diferença.
+- **Regras novas de rotulagem e campo:**
+  - defeito dentro de remendo não é rotulado (X2.1.1.2, P23);
+  - vala recomposta com peças iguais às originais não é remendo (X1.10, P23);
+  - grau por profundidade vem só da medida de campo; sem medida, não se usa sombra, chanfro ou umidade para estimar o grau (P28);
+  - tag nova `marca_campo` para giz ou tinta, e filmagem C1/C2 feita antes da marcação com giz (P27);
+  - planilha de vistoria passou para 25 colunas (P25); kit e protocolo de campo no Passo 5 da fase 1 (P26).
+- **Meta da fase 4 (P29, proposta):** tipo certo em 95% dos casos, medida linear dentro de 10% e área dentro de 20% da remedição em campo. A seção 8.1 da norma fixa essa tolerância para **inspetores humanos**; aplicá-la a um sistema automático é escolha do projeto e deve ser declarada assim no artigo. **Lacuna:** o percentual mínimo de defeitos que devem ficar dentro da tolerância ainda não foi definido.
+- **Citação (P30):** ASTM E2840-11 (reaprovada em 2019). O texto lido é o de 2011. Os números acima devem ser conferidos contra a cópia oficial da ASTM antes da redação final.
+- **Números (com fonte):** nenhum resultado medido nesta entrada. Todos os limites são da norma ou decisões de método. Fonte: `comparacao-astm-e2840.md`, seção 7.5.
+- **Impacto no artigo:**
+  - Seção 3.4 (classes e severidade): a tabela de graus passa a citar o Apêndice X1 direto, com a v2 do guia. Declarar a divergência em `peca_faltante`, a extrapolação ao paralelepípedo (P14 B) e as regras de remendo, vala, `marca_campo` e grau por medida de campo.
+  - Seção 3 (método de coleta): planilha de 25 colunas, kit e protocolo do Passo 5 da fase 1, ordem filmagem antes do giz.
+  - Seção 4 (resultados da medição, fase 4): a meta P29 é critério do projeto, adaptado de uma tolerância para humanos. Falta definir o percentual mínimo.
+  - Seção 5 (limitações): perda de rejunte em junta com menos de 6 mm só entra pela planilha, não pela imagem. Na imagem, a abertura aparente inclui o chanfro e superestima a largura real; alerta para a fase 4. O paralelepípedo segue sem fonte própria de limites. Os números da norma vêm de cópia não oficial até a conferência de P30.
+
 ### 2026-10-26 · Fase 0 · Comparação com a ASTM E2840 completa
 
 - **O que aconteceu:** segunda rodada da tarefa F0-02. Foi lida a ASTM E2840 completa (22 p.): corpo, Apêndice X1 (tipos e graus), X2 (orientações de vistoria) e X3 (exemplo de cálculo e curvas de dedução). Fonte única desta entrada: `docs/guias/comparacao-astm-e2840.md`, seção 7. Nada foi aplicado ao `guia-rotulagem.md` nem ao `classes.json`: o guia continua na v1 de 2026-10-20.

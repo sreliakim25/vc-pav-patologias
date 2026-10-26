@@ -1,6 +1,6 @@
 # Comparação do guia de rotulagem com a ASTM E2840 e o Manual de Desempenho ABCP
 
-Data: 2026-10-19 · Tarefas: F0-01 e F0-02 · Situação: **P1 a P12 decididas pelo Eliakim em 2026-10-20 (seção 6); P13 a P30, da norma completa, pendentes de validação (seção 7, 2026-10-26)**
+Data: 2026-10-19 · Tarefas: F0-01 e F0-02 · Situação: **P1 a P12 decididas pelo Eliakim em 2026-10-20 (seção 6); P13 a P30, da norma completa, aceitas pelo Eliakim em 2026-10-26 (P14 com a opção B) e aplicadas no guia v2 (seção 7.5)**
 
 Este documento compara as classes e os graus de [guia-rotulagem.md](guia-rotulagem.md) (v1) com duas fontes. Ele separa o que **está escrito na fonte** do que é **proposta** deste projeto. As decisões estão na seção 6 e já foram aplicadas ao guia.
 
@@ -10,12 +10,12 @@ Este documento compara as classes e os graus de [guia-rotulagem.md](guia-rotulag
 
 | Fonte | O que tem | Limitação |
 |---|---|---|
-| ASTM E2840-11 (reaprovada em 2019), *Standard Practice for Pavement Condition Index Surveys for Interlocking Concrete Roads and Parking Lots* | Prévia de 3 páginas: escopo, terminologia, equipamentos, amostragem e ficha de campo (Fig. 2) com os 11 tipos de defeito | **Não traz o Apêndice X1**, onde estão as definições e os graus baixo, médio e alto de cada defeito, nem as curvas de dedução do PCI |
+| ASTM E2840-11 (reaprovada em 2019; texto lido: o de 2011, ver P30), *Standard Practice for Pavement Condition Index Surveys for Interlocking Concrete Roads and Parking Lots* | Prévia de 3 páginas: escopo, terminologia, equipamentos, amostragem e ficha de campo (Fig. 2) com os 11 tipos de defeito | **Não traz o Apêndice X1**, onde estão as definições e os graus baixo, médio e alto de cada defeito, nem as curvas de dedução do PCI |
 | SILVA, C. O. *Sistema de piso com peças de concreto: pavimento intertravado. Manual de desempenho.* 1. ed. São Paulo: ABCP, BlocoBrasil, 2022. ISBN 978-85-87024-86-2 | Seção 2 (p. 8 a 11): um limite por defeito, citando a ASTM E2840 (edição 2015), e limites de recebimento da NBR 15953 | Fonte secundária. Dá **um limite por defeito**, não os três graus, e não diz a qual grau esse limite corresponde |
 
 Os PDFs ficam em `docs/normas/`, que não vai para o Git (direitos autorais).
 
-**Conferência de edição:** a capa da ASTM informa que a edição de 2019 é reaprovação do texto de 2011, e que a edição anterior foi a E2840-11 (2015). O manual cita a edição de 2015, então as duas fontes tratam do mesmo texto.
+**Conferência de edição:** a capa da prévia informa que a edição de 2019 é reaprovação do texto de 2011, e que a edição anterior foi a E2840-11 (2015). O manual cita a edição de 2015, então as duas fontes tratam do mesmo texto. A cópia completa lida em 2026-10-26 tem o texto de 2011 e não traz a marca de reaprovação (7.1). Citação adotada (P30): **ASTM E2840-11 (reaprovada em 2019)**, declarando que o texto lido é o de 2011 e que a reaprovação não altera o texto.
 
 ---
 
@@ -111,7 +111,7 @@ Aplicado em [guia-rotulagem.md](guia-rotulagem.md) v1 e em [classes.json](classe
 
 ## 7. Norma completa (2026-10-26)
 
-Tarefa F0-02, segunda rodada. Lida a ASTM E2840 completa (22 p.): corpo, Apêndice X1 (tipos e graus), X2 (orientações de vistoria) e X3 (exemplo de cálculo e curvas de dedução). Nesta seção, **"norma"** marca fato tirado do texto, com a seção citada; **"proposta"** marca o que depende da validação do Eliakim. Nada desta seção foi aplicado ao guia nem ao `classes.json`.
+Tarefa F0-02, segunda rodada. Lida a ASTM E2840 completa (22 p.): corpo, Apêndice X1 (tipos e graus), X2 (orientações de vistoria) e X3 (exemplo de cálculo e curvas de dedução). Nesta seção, **"norma"** marca fato tirado do texto, com a seção citada; **"proposta"** marca o que depende da validação do Eliakim. As propostas P13 a P30 foram aceitas pelo Eliakim em 2026-10-26 e aplicadas no guia v2, no `classes.json`, no `modelo-vistoria.csv` e nos documentos das fases 1 e 4 (7.5).
 
 ### 7.1 Edição e cópia lida
 
@@ -175,30 +175,30 @@ Consequência: a expressão "limite aceitável de 10 mm" no guia v1 (`junta_aber
 
 ### 7.5 Propostas da norma completa
 
-Todas são **propostas**. Nada foi aplicado.
+Decisão do Eliakim em 2026-10-26: **todas aceitas**; na P14, a **opção B**. Aplicadas no [guia v2](guia-rotulagem.md), em [classes.json](classes.json), em [modelo-vistoria.csv](modelo-vistoria.csv), na [fase 1](../fases/fase-1-filmagens-vistoria.md) (Passos 1, 4 e 5) e na [fase 4](../fases/fase-4-pos-treino.md) (Passos 4 a 6 e portão).
 
-| # | Alvo | Proposta |
-|---|---|---|
-| P13 | `afundamento`, intertravado | Adotar os três graus da norma: baixo de 5 a 13 mm, médio acima de 13 até 25 mm, alto acima de 25 mm; abaixo de 5 mm não rotular. Retirar "água parada" do critério do alto: a norma usa água só como indício visual, não como grau. Substitui "a calibrar (proposta: 3 cm)" |
-| P14 | `afundamento`, paralelepípedo | A norma não cobre. Opção A: manter 15 mm no baixo (P1) e médio e alto "a calibrar", aguardando a fonte da F0-11. Opção B: usar a escala da norma (5, 13, 25 mm) como provisória também no paralelepípedo, marcada "extrapolação da ASTM, a calibrar na fase 1". A opção B dá uma escala única e permite o PCI nas duas superfícies |
-| P15 | tag `trilha_roda` | Graus próprios: baixo de 6 a 13 mm, médio até 25 mm, alto acima de 25 mm, régua atravessada na trilha. Incluir na definição: rebaixo por carga estática de roda (estacionamento) conta como trilha. No PCI, máscara com a tag usa a curva X3.11; sem a tag, a X3.2 |
-| P16 | `peca_faltante` | Médio: 2 a 9 peças na mesma área; alto: 10 ou mais peças na mesma área ou conforto afetado. Hoje: 2 a 5 e acima de 5. A contagem continua definindo o grau; a quantidade para o PCI passa a ser a área em m² da máscara |
-| P17 | `peca_quebrada` | Baixo: uma ou duas fissuras sem separação, ou lasca; médio: fissuração avançada ou lascamento, peça inteira no lugar; alto: peça partida em vários pedaços ou desintegrada (inclui fragmentos soltos). Hoje "peça partida no lugar" é médio, e a norma põe peça em pedaços no alto. Regra nova: peça isolada só com fissura fina, sem abertura, não é rotulada. Corrigir a origem: "uma ou duas fissuras", não "1 ou 2 peças" |
-| P18 | `junta_aberta` | Adotar as faixas da norma: baixo de 6 a 10 mm, médio acima de 10 até 13 mm, alto acima de 13 mm; abaixo de 6 mm não rotular. Medida: largura média real, descontado o chanfro. Troca a origem "intertravado permeável (F0-11)" por "ASTM E2840 X1.4". Alerta para a fase 4: na imagem, a abertura aparente inclui o chanfro e superestima a largura |
-| P19 | planilha, perda de rejunte | Manter a classe única na rotulagem e acrescentar à planilha a profundidade da perda de rejunte (régua metálica fina, a partir do fundo do chanfro), para calcular o defeito 8 no PCI com a curva X3.8 |
-| P20 | `desconfinamento` | Manter os graus do guia, que já batem com a norma, e trocar a origem de médio e alto para "ASTM E2840 X1.3". Quantidade em metros lineares de borda. Registrar no guia o erro tipográfico do médio na norma e adotar: médio = junta aumentada até 13 mm com rotação |
-| P21 | `desnivel` | Adotar: baixo de 3 a 6 mm, médio acima de 6 até 10 mm, alto acima de 10 mm, régua de 0,3 m. Substitui "a calibrar" |
-| P22 | `remendo` | Passar de "sem grau" para três graus da norma: baixo em bom estado sem efeito no conforto; médio de bom a regular, conforto começando a piorar; alto em mau estado, conforto afetado. A norma reconhece (8.1) que grau por conforto é subjetivo: conferir a concordância desta classe com atenção |
-| P23 | regra geral, remendo e vala | Defeito dentro de remendo não é rotulado nem registrado: ele só eleva o grau do remendo (X2.1.1.2). Recomposição de vala feita com peças iguais às originais **não é remendo** (X1.10: material diferente) e seus defeitos são rotulados normalmente, com a tag `vala` |
-| P24 | `classes.json` | Acrescentar a cada classe o código do defeito ASTM e a unidade de quantidade do PCI (`m2` em todas, exceto `desconfinamento` em `m`), para a fase 4 converter máscaras em quantidades |
-| P25 | `modelo-vistoria.csv` | Novas colunas: `codigo_astm`, `unidade_amostra`, `area_m2`, `extensao_borda_m`, `desnivel_mm` (régua de 0,3 m, separado de `profundidade_mm`), `profundidade_rejunte_mm`, `altura_elevacao_mm`, `desvio_linha_mm`, `conforto_afetado` (sim/não), `superficie` (seco/molhado). Aceitar na coluna `classe` os defeitos fora da rotulagem (elevação, fluência) e um registro por grau quando o mesmo defeito tiver trechos de graus diferentes (X2.13) |
-| P26 | protocolo da fase 1, Passo 5, e kit | Régua de 3 m de tubo de alumínio (a norma sugere 40 mm de diâmetro interno); prancheta ou régua de 0,3 m para desnível; régua metálica fina para rejunte; roda odométrica de 30 mm ou trena; linha de 15 m se a fluência for medida em campo. Marcar com giz onde a régua toca o pavimento e o contorno de cada grau; não estimar comprimento nem profundidade pela sombra ou pela umidade: medir; defeito na divisa entre unidades de amostra vai para a borda esquerda e frontal; em pavimento muito degradado, estimar com cuidado e limitar a cerca de 20 min por unidade |
-| P27 | tag nova `marca_campo` | Fazer as passadas C1 e C2 antes de marcar o pavimento com giz; nas imagens em que marca de giz ou tinta aparecer (C3), usar a tag `marca_campo` para que o modelo não aprenda a marca como pista do defeito |
-| P28 | regra geral de grau | O grau por profundidade (afundamento, desnível, junta) vem da medida de campo quando existir. Sem medida, o rotulador dá o grau visual sem usar sombra, chanfro ou mancha de umidade como evidência de profundidade (X1.2.2, X2.7, X2.8) |
-| P29 | metas da fase 4 e artigo | Usar a tolerância da norma (8.1) como critério de aceitação da medição automática: identificar o tipo certo em 95% dos casos; medida linear dentro de 10% e área dentro de 20% da remedição em campo |
-| P30 | referência | Citar a edição vigente E2840-11 (reaprovada em 2019), declarando que o texto lido é o de 2011 (a reaprovação não altera o texto). Antes da redação final, conferir os números citados no artigo contra a cópia oficial comprada da ASTM, porque os metadados desta cópia indicam um arquivo regerado |
+| # | Alvo | Proposta | Decisão (2026-10-26) |
+|---|---|---|---|
+| P13 | `afundamento`, intertravado | Adotar os três graus da norma: baixo de 5 a 13 mm, médio acima de 13 até 25 mm, alto acima de 25 mm; abaixo de 5 mm não rotular. Retirar "água parada" do critério do alto: a norma usa água só como indício visual, não como grau. Substitui "a calibrar (proposta: 3 cm)" | Aceita |
+| P14 | `afundamento`, paralelepípedo | A norma não cobre. Opção A: manter 15 mm no baixo (P1) e médio e alto "a calibrar", aguardando a fonte da F0-11. Opção B: usar a escala da norma (5, 13, 25 mm) como provisória também no paralelepípedo, marcada "extrapolação da ASTM, a calibrar na fase 1". A opção B dá uma escala única e permite o PCI nas duas superfícies | Aceita, opção B. O limite de 15 mm (P1) passa a ser referência de comparação, não limite de grau |
+| P15 | tag `trilha_roda` | Graus próprios: baixo de 6 a 13 mm, médio até 25 mm, alto acima de 25 mm, régua atravessada na trilha. Incluir na definição: rebaixo por carga estática de roda (estacionamento) conta como trilha. No PCI, máscara com a tag usa a curva X3.11; sem a tag, a X3.2 | Aceita |
+| P16 | `peca_faltante` | Médio: 2 a 9 peças na mesma área; alto: 10 ou mais peças na mesma área ou conforto afetado. Hoje: 2 a 5 e acima de 5. A contagem continua definindo o grau; a quantidade para o PCI passa a ser a área em m² da máscara | Aceita |
+| P17 | `peca_quebrada` | Baixo: uma ou duas fissuras sem separação, ou lasca; médio: fissuração avançada ou lascamento, peça inteira no lugar; alto: peça partida em vários pedaços ou desintegrada (inclui fragmentos soltos). Hoje "peça partida no lugar" é médio, e a norma põe peça em pedaços no alto. Regra nova: peça isolada só com fissura fina, sem abertura, não é rotulada. Corrigir a origem: "uma ou duas fissuras", não "1 ou 2 peças" | Aceita |
+| P18 | `junta_aberta` | Adotar as faixas da norma: baixo de 6 a 10 mm, médio acima de 10 até 13 mm, alto acima de 13 mm; abaixo de 6 mm não rotular. Medida: largura média real, descontado o chanfro. Troca a origem "intertravado permeável (F0-11)" por "ASTM E2840 X1.4". Alerta para a fase 4: na imagem, a abertura aparente inclui o chanfro e superestima a largura | Aceita |
+| P19 | planilha, perda de rejunte | Manter a classe única na rotulagem e acrescentar à planilha a profundidade da perda de rejunte (régua metálica fina, a partir do fundo do chanfro), para calcular o defeito 8 no PCI com a curva X3.8 | Aceita |
+| P20 | `desconfinamento` | Manter os graus do guia, que já batem com a norma, e trocar a origem de médio e alto para "ASTM E2840 X1.3". Quantidade em metros lineares de borda. Registrar no guia o erro tipográfico do médio na norma e adotar: médio = junta aumentada até 13 mm com rotação | Aceita |
+| P21 | `desnivel` | Adotar: baixo de 3 a 6 mm, médio acima de 6 até 10 mm, alto acima de 10 mm, régua de 0,3 m. Substitui "a calibrar" | Aceita |
+| P22 | `remendo` | Passar de "sem grau" para três graus da norma: baixo em bom estado sem efeito no conforto; médio de bom a regular, conforto começando a piorar; alto em mau estado, conforto afetado. A norma reconhece (8.1) que grau por conforto é subjetivo: conferir a concordância desta classe com atenção | Aceita |
+| P23 | regra geral, remendo e vala | Defeito dentro de remendo não é rotulado nem registrado: ele só eleva o grau do remendo (X2.1.1.2). Recomposição de vala feita com peças iguais às originais **não é remendo** (X1.10: material diferente) e seus defeitos são rotulados normalmente, com a tag `vala` | Aceita |
+| P24 | `classes.json` | Acrescentar a cada classe o código do defeito ASTM e a unidade de quantidade do PCI (`m2` em todas, exceto `desconfinamento` em `m`), para a fase 4 converter máscaras em quantidades | Aceita |
+| P25 | `modelo-vistoria.csv` | Novas colunas: `codigo_astm`, `unidade_amostra`, `area_m2`, `extensao_borda_m`, `desnivel_mm` (régua de 0,3 m, separado de `profundidade_mm`), `profundidade_rejunte_mm`, `altura_elevacao_mm`, `desvio_linha_mm`, `conforto_afetado` (sim/não), `superficie` (seco/molhado). Aceitar na coluna `classe` os defeitos fora da rotulagem (elevação, fluência) e um registro por grau quando o mesmo defeito tiver trechos de graus diferentes (X2.13) | Aceita |
+| P26 | protocolo da fase 1, Passo 5, e kit | Régua de 3 m de tubo de alumínio (a norma sugere 40 mm de diâmetro interno); prancheta ou régua de 0,3 m para desnível; régua metálica fina para rejunte; roda odométrica de 30 mm ou trena; linha de 15 m se a fluência for medida em campo. Marcar com giz onde a régua toca o pavimento e o contorno de cada grau; não estimar comprimento nem profundidade pela sombra ou pela umidade: medir; defeito na divisa entre unidades de amostra vai para a borda esquerda e frontal; em pavimento muito degradado, estimar com cuidado e limitar a cerca de 20 min por unidade | Aceita |
+| P27 | tag nova `marca_campo` | Fazer as passadas C1 e C2 antes de marcar o pavimento com giz; nas imagens em que marca de giz ou tinta aparecer (C3), usar a tag `marca_campo` para que o modelo não aprenda a marca como pista do defeito | Aceita |
+| P28 | regra geral de grau | O grau por profundidade (afundamento, desnível, junta) vem da medida de campo quando existir. Sem medida, o rotulador dá o grau visual sem usar sombra, chanfro ou mancha de umidade como evidência de profundidade (X1.2.2, X2.7, X2.8) | Aceita |
+| P29 | metas da fase 4 e artigo | Usar a tolerância da norma (8.1) como critério de aceitação da medição automática: identificar o tipo certo em 95% dos casos; medida linear dentro de 10% e área dentro de 20% da remedição em campo | Aceita |
+| P30 | referência | Citar a edição vigente E2840-11 (reaprovada em 2019), declarando que o texto lido é o de 2011 (a reaprovação não altera o texto). Antes da redação final, conferir os números citados no artigo contra a cópia oficial comprada da ASTM, porque os metadados desta cópia indicam um arquivo regerado | Aceita |
 
-**Limites "a calibrar" que passam a ter fonte oficial (intertravado), se as propostas forem aceitas:** médio e alto de `afundamento` (P13), médio e alto de `peca_faltante` (P16), os três graus de `peca_quebrada` (P17), as faixas de `junta_aberta` (P18), médio e alto de `desconfinamento` (P20), médio e alto de `desnivel` (P21) e os graus de `remendo` (P22). **Continuam sem fonte:** todos os limites do paralelepípedo (P14) e a `vegetacao`, que segue sem grau.
+**Limites "a calibrar" que passaram a ter fonte oficial (intertravado), com as propostas aceitas:** médio e alto de `afundamento` (P13), médio e alto de `peca_faltante` (P16), os três graus de `peca_quebrada` (P17), as faixas de `junta_aberta` (P18), médio e alto de `desconfinamento` (P20), médio e alto de `desnivel` (P21) e os graus de `remendo` (P22). **Continuam sem fonte:** todos os limites do paralelepípedo, que usam a escala da norma por extrapolação, a calibrar na fase 1 (P14, opção B), e a `vegetacao`, que segue sem grau.
 
 ### 7.6 Orientações do X2 para a vistoria da fase 1
 
@@ -236,8 +236,8 @@ Avaliação (proposta): **dá para calcular o PCI** nas fases 5 e 7 digitalizand
 
 | Lacuna | A norma resolve? |
 |---|---|
-| 15 mm do afundamento em paralelepípedo (especificação municipal) | **Não.** A norma só cobre peças de concreto (C936). Fica pendente, salvo se a opção B da P14 for escolhida, que torna o 15 mm desnecessário |
+| 15 mm do afundamento em paralelepípedo (especificação municipal) | **Não.** A norma só cobre peças de concreto (C936). Com a opção B da P14 (2026-10-26), o 15 mm deixou de ser limite de grau e virou referência de comparação; a fonte municipal continua útil para essa comparação |
 | Faixas de "intertravado permeável" em `junta_aberta` | **Sim, por substituição.** A norma tem os três graus oficiais (6, 10, 13 mm), diferentes das faixas do guia (P18) |
 | Faixas de "intertravado permeável" em médio e alto de `desconfinamento` | **Sim.** A norma dá médio com rotação e alto com rotação considerável e recalque local, igual ao guia (P20) |
 
-Se P18 e P20 forem aceitas, a fonte de intertravado permeável deixa de ser necessária e a F0-11 fica reduzida ao limite de 15 mm do paralelepípedo.
+Com P18 e P20 aceitas (2026-10-26), a fonte de intertravado permeável deixou de ser necessária e a F0-11 fica reduzida à fonte do limite municipal de 15 mm do paralelepípedo, agora só como referência de comparação.
