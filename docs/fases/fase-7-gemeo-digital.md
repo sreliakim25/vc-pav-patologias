@@ -6,8 +6,8 @@
 | **Duração estimada** | 6 meses em diante |
 | **Subagente principal** | [`gemeo-digital`](../../.claude/agents/gemeo-digital.md) |
 | **Subagentes de apoio** | [`seguranca-supabase`](../../.claude/agents/seguranca-supabase.md), [`redator-artigo`](../../.claude/agents/redator-artigo.md) |
-| **Entradas** | Histórico de passadas, defeitos revisados, cadastro de valas e ordens de serviço |
-| **Saídas** | Base geográfica de trechos, identidade persistente dos defeitos, ligação com valas, indicadores de passivo, previsão de falha, ciclo fechado com ordem de serviço |
+| **Entradas** | Histórico de passadas, defeitos revisados, cadastro de trechos reparados (qualquer causa: vala, dano, outra) e ordens de serviço |
+| **Saídas** | Base geográfica de trechos, identidade persistente dos defeitos, ligação com os trechos reparados, indicadores de passivo, previsão de falha, ciclo fechado com ordem de serviço |
 
 ---
 
@@ -50,25 +50,27 @@ from eixos, generate_series(0, 1, 20.0 / st_length(geom::geography)) as f;
 
 ### Passo 4. Ligação com a obra
 
-1. Valas, ordens de serviço, datas de abertura, recomposição provisória e definitiva, e prazos legais do município entram nas tabelas `valas` e `recomposicoes`.
-2. Cada defeito é associado à vala mais próxima dentro de uma tolerância (`st_dwithin`), ou marcado como pré-existente pela vistoria cautelar.
-3. Casos ambíguos vão para revisão manual no painel.
+1. A empresa repara todo dano de pavimento nas ruas da obra, qualquer que seja a causa. A maioria dos reparos não vem de vala, e sim de pavimento danificado por algum outro motivo. Por isso a unidade de cadastro é o **trecho reparado**, não só a vala recomposta.
+2. Cada trecho reparado entra na tabela futura `trechos_reparados` (geometria do reparo, SRID 4326), com a coluna `causa` (`vala`, `dano`, `outra`, `desconhecida`), a ordem de serviço, a data de abertura ou de constatação do dano, o reparo provisório e o definitivo, e o prazo legal do município. O nome não se confunde com a tabela `trechos` do Passo 1, que é a divisão da rede de ruas.
+3. Cada defeito é associado ao trecho reparado mais próximo dentro de uma tolerância (`st_dwithin`), ou marcado como pré-existente pela vistoria cautelar.
+4. Casos ambíguos (dois trechos reparados dentro da tolerância, ou defeito na borda de um reparo) vão para revisão manual no painel.
+5. Como a causa fica registrada, toda análise pode ser separada por causa, por exemplo reparos de vala contra os demais reparos.
 
 ### Passo 5. Indicadores do gêmeo
 
 | Indicador | Cálculo |
 |---|---|
 | Área de passivo aberto | Soma de `area_m2` dos defeitos abertos, por revestimento e por responsável |
-| Custo estimado | Área vezes o preço unitário de recomposição do contrato |
-| Idade do passivo | Dias desde a abertura da vala, contra o prazo legal |
-| Recomposições no prazo | Percentual concluído dentro do prazo |
-| Reincidência | Recomposições que voltaram a ter defeito em 3, 6 e 12 meses |
-| Índice de condição por trecho | Antes e depois da obra: dano atribuível à vala |
+| Custo estimado | Área vezes o preço unitário de reparo do contrato |
+| Idade do passivo | Dias desde a abertura da vala ou a constatação do dano, contra o prazo legal |
+| Reparos no prazo | Percentual de trechos reparados concluídos dentro do prazo, por causa |
+| Reincidência | Trechos reparados que voltaram a ter defeito em 3, 6 e 12 meses, por causa |
+| Índice de condição por trecho | Antes e depois da obra: dano atribuível aos reparos, por causa |
 
 ### Passo 6. Previsão
 
-1. Com 6 meses ou mais de histórico, treine um modelo simples (regressão logística ou árvore de decisão) para prever quais recomposições vão piorar de grau nos próximos 3 meses.
-2. Variáveis: tipo de pavimento, idade, grau atual, tráfego (classe da via), chuva acumulada, tempo até a recomposição.
+1. Com 6 meses ou mais de histórico, treine um modelo simples (regressão logística ou árvore de decisão) para prever quais trechos reparados vão piorar de grau nos próximos 3 meses.
+2. Variáveis: tipo de pavimento, causa do reparo, idade, grau atual, tráfego (classe da via), chuva acumulada, tempo até o reparo.
 3. Avalie com validação temporal (treina no passado, testa no futuro).
 
 ### Passo 7. Fechar o ciclo
@@ -90,8 +92,8 @@ from eixos, generate_series(0, 1, 20.0 / st_length(geom::geography)) as f;
 | F7-01 | Tabela de trechos a partir do OpenStreetMap | `gemeo-digital` |
 | F7-02 | Casamento de trajeto | `gemeo-digital` |
 | F7-03 | Identidade persistente dos defeitos | `gemeo-digital` |
-| F7-04 | Tabelas de valas e recomposições | `gemeo-digital` + `seguranca-supabase` |
-| F7-05 | Associação defeito e vala | `gemeo-digital` |
+| F7-04 | Tabela de trechos reparados, com causa | `gemeo-digital` + `seguranca-supabase` |
+| F7-05 | Associação defeito e trecho reparado | `gemeo-digital` |
 | F7-06 | Indicadores do gêmeo no painel | `gemeo-digital` |
 | F7-07 | Modelo de previsão | `gemeo-digital` |
 | F7-08 | Ordem de serviço automática e baixa | `gemeo-digital` |
@@ -103,7 +105,7 @@ from eixos, generate_series(0, 1, 20.0 / st_length(geom::geography)) as f;
 ## Critério para considerar a fase pronta
 
 - [ ] O relatório semestral de passivo sai do banco, sem planilha manual.
-- [ ] Um defeito pode ser acompanhado do dia da vala até a baixa.
+- [ ] Um defeito pode ser acompanhado do dia da abertura da vala ou da constatação do dano até a baixa.
 - [ ] A previsão de falha tem desempenho melhor que uma regra simples de idade.
 
 ## Indicadores acompanhados no painel
@@ -112,7 +114,7 @@ from eixos, generate_series(0, 1, 20.0 / st_length(geom::geography)) as f;
 |---|---|
 | Trechos cadastrados | toda a área da obra |
 | Defeitos com identidade estável | 95% |
-| Defeitos associados à vala ou pré-existentes | 100% |
+| Defeitos associados a um trecho reparado ou pré-existentes | 100% |
 | Relatório semestral sem planilha | sim |
 
 ## O que registrar para o artigo
@@ -120,4 +122,5 @@ from eixos, generate_series(0, 1, 20.0 / st_length(geom::geography)) as f;
 - Arquitetura do gêmeo e modelo de dados.
 - Erro de posição antes e depois do casamento de trajeto.
 - Desempenho da previsão em validação temporal.
-- Dano atribuível às valas, por tipo de pavimento.
+- Dano atribuível aos reparos, por causa e por tipo de pavimento.
+- Pergunta de pesquisa (hipótese, a testar com a reincidência por causa): os reparos de vala falham mais que os reparos de outros danos?

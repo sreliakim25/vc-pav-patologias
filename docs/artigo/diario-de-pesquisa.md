@@ -14,6 +14,26 @@ Registro cronológico de tudo que tem valor para o artigo: decisões de método,
 
 ---
 
+### 2026-10-26 · Fase 0 · De vala recomposta para trecho reparado
+
+- **O que aconteceu:** o Eliakim decidiu em 2026-10-26 trocar a unidade de análise. Deixa de ser a vala recomposta e passa a ser o **trecho reparado**, com a causa do reparo registrada à parte: `vala`, `dano`, `outra` ou `desconhecida`. Esta entrada altera a regra "vala recomposta com peças iguais às originais não é remendo" e a tag `vala` citadas na entrada "Guia de rotulagem v2", de mesma data.
+- **Decisão e motivo:** a empresa repara todo dano de pavimento nas ruas, qualquer que seja a causa (desnível, tráfego, roda). A maioria dos reparos não é por vala. Restringir o estudo às valas deixaria de fora a maior parte dos trechos reparados.
+- **Efeitos nos documentos do projeto:**
+  - **Guia de rotulagem v2.1:** a tag `vala` vira `trecho_reparado`. A causa **não é rotulada na imagem**; vai para a planilha de vistoria, nas colunas `trecho_reparado` e `causa_reparo`.
+  - **Regra P23 mantida:** reparo com peças iguais às originais não é remendo (ASTM E2840, X1.10). A regra passa a valer para qualquer trecho reparado, não só para vala.
+  - **Fase 0, Passo 2:** o critério de escolha das ruas passa a pedir pelo menos um trecho reparado em cada tipo de pavimento, no lugar de uma recomposição de vala.
+  - **Fases 5 e 7 (proposta, não implementada):** tabela futura `trechos_reparados` com coluna `causa`; associação entre defeito e trecho reparado; indicadores separáveis por causa.
+- **Hipótese nova (não testada, não é resultado):** reparos de vala falham mais que reparos de outros danos. A testar pela reincidência de defeitos por causa do reparo na fase 7.
+- **Ruas do piloto (F0-03, em andamento):** 10 ruas candidatas: 5 de intertravado com peça retangular e 5 de paralelepípedo granítico de forma aproximadamente cúbica. Todas em loteamentos abertos e entregues, com tráfego que permite filmar devagar. Os nomes das ruas não entram neste diário; ficam em arquivo local fora do Git. Para escolher as 4 ruas ainda faltam, por rua: extensão, trechos reparados e defeitos presentes.
+- **Números (com fonte):** nenhum resultado medido nesta entrada. A contagem de 10 candidatas (5 e 5) vem do relato do Eliakim na tarefa F0-03.
+- **Pendência de enquadramento:** confirmar com o Eliakim se o artigo deixa de focar só no passivo de obras de saneamento. Até a confirmação, o texto não deve mudar o enquadramento da introdução.
+- **Impacto no artigo:**
+  - Introdução e objetivo: depende da pendência de enquadramento. Se confirmada, o objeto passa a ser o passivo de reparos de pavimento em geral, com a vala como uma das causas.
+  - Seção 3.1 (área de estudo): critério de escolha das ruas com trecho reparado em cada pavimento; características das 4 ruas quando escolhidas.
+  - Seção 3.4 (classes e severidade): tag `trecho_reparado` no guia v2.1; causa só na planilha; regra P23 estendida a todo trecho reparado.
+  - Fases 5 e 7 (resultados de aplicação e gêmeo digital): indicadores por causa e teste da hipótese de reincidência.
+  - Seção 5 (limitações): a causa vem de registro de campo ou da empresa, não da imagem. A categoria `desconhecida` deve ter a frequência declarada, porque reduz o poder do teste por causa.
+
 ### 2026-10-26 · Fase 0 · Guia de rotulagem v2 (decisões P13 a P30)
 
 - **O que aconteceu:** o Eliakim aceitou as 18 propostas P13 a P30 em 2026-10-26, com P14 na opção B. As decisões foram aplicadas no `docs/guias/guia-rotulagem.md`, agora v2. Fontes: `docs/guias/comparacao-astm-e2840.md`, seção 7.5, coluna "Decisão (2026-10-26)", e `guia-rotulagem.md` v2. Esta entrada encerra o estado "pendentes de decisão" das propostas P13 a P30 registrado na entrada anterior, de mesma data.

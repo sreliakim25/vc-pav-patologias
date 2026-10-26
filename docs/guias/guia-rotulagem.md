@@ -1,6 +1,6 @@
 # Guia de rotulagem
 
-Versão: **v2 (2026-10-26, graus do Apêndice X1 da ASTM E2840-11; no paralelepípedo, a mesma escala por extrapolação, a calibrar na fase 1)**
+Versão: **v2.1 (2026-10-26, graus do Apêndice X1 da ASTM E2840-11; no paralelepípedo, a mesma escala por extrapolação, a calibrar na fase 1; tag `trecho_reparado`)**
 
 Este guia define o que cada classe significa, como desenhar o rótulo e como dar o grau de severidade. Toda pessoa que rotula segue este guia; toda dúvida recorrente vira uma regra nova aqui, com a versão atualizada.
 
@@ -16,7 +16,7 @@ Neste guia, **"norma"** indica o que está escrito na ASTM E2840-11, com a seç�
 4. Em caso de dúvida entre duas classes, siga a **ordem de prioridade** abaixo e marque a imagem com a tag `duvida`.
 5. Imagens sem nenhum defeito também entram no dataset: não apague, apenas não rotule.
 6. **Defeito dentro de remendo** não é rotulado: ele só eleva o grau do `remendo` (norma, X2.1.1.2). (v2)
-7. **Recomposição de vala com peças iguais às originais não é remendo**, porque remendo é reposição com material diferente, como asfalto, concreto ou agregado (norma, X1.10.1). Os defeitos dessa recomposição são rotulados normalmente, cada um na sua classe, com a tag `vala`. (v2)
+7. **Recomposição com peças iguais às originais não é remendo**, qualquer que seja a causa do reparo (vala, dano no pavimento ou outra), porque remendo é reposição com material diferente, como asfalto, concreto ou agregado (norma, X1.10.1). Os defeitos desse trecho reparado são rotulados normalmente, cada um na sua classe, com a tag `trecho_reparado`. A causa do reparo não é rotulada na imagem: vai para a planilha de vistoria (`causa_reparo`). (v2, generalizada na v2.1)
 8. **Grau por profundidade** (`afundamento`, `desnivel`, `junta_aberta`, `desconfinamento`): use a medida de campo da planilha de vistoria quando existir. Sem medida, dê o grau visual **sem usar sombra, chanfro da peça ou mancha de umidade como evidência de profundidade**, porque eles exageram o desnível aparente (norma, X1.2.2, X2.7 e X2.8). (v2)
 9. **Valor de fronteira fica no grau menor.** A norma repete a fronteira nos dois graus (ex.: 5 a 13 e 13 a 25 mm); o projeto adota: baixo até 13 mm inclusive, médio acima de 13 até 25 mm, alto acima de 25 mm. (v2, projeto)
 10. **Abaixo do piso do grau baixo não há defeito:** não rotule. A menor diferença de cota mensurável é 3 mm (norma, X2.1.1.4). (v2)
@@ -84,7 +84,7 @@ Os milímetros são os da norma, que traz polegadas como padrão e milímetros c
 | `duvida` | Rotulador não teve certeza da classe |
 | `molhado` | Pavimento molhado na imagem |
 | `sombra_forte` | Sombra cobre parte relevante do defeito |
-| `vala` | Defeito está sobre recomposição de vala feita com peças iguais às originais (se for com outro material, é `remendo`) |
+| `trecho_reparado` | Defeito está sobre um trecho já reparado, com peças repostas ou reassentadas iguais às originais, qualquer que seja a causa (vala, dano no pavimento ou outra). Se o reparo for com outro material, é `remendo`. A causa não é rotulada: vai para a planilha. (v2.1, substitui a tag `vala`) |
 | `trilha_roda` | Use em `afundamento` quando o rebaixo for longitudinal, no caminho da roda (norma, X1.11: *rutting*). Rebaixo causado por carga estática de roda, como em vaga de estacionamento, também conta como trilha (norma, X1.11.2). Tem graus próprios (tabela acima). No PCI, máscara com a tag usa a curva de dedução X3.11; sem a tag, a X3.2 |
 | `marca_campo` | Marca de giz, tinta, número ou etiqueta da vistoria aparece na imagem (em geral nas fotos C3). O defeito é rotulado normalmente; a tag existe para que o modelo não aprenda a marca como pista do defeito. (v2) |
 
@@ -122,6 +122,7 @@ Referência: ASTM E2840-11 (reaprovada em 2019). O texto lido é o da edição d
 
 | Versão | Data | Mudança |
 |---|---|---|
+| v2.1 | 2026-10-26 | Tag `vala` renomeada para `trecho_reparado` e generalizada: vale para qualquer trecho reparado com peças iguais às originais, seja qual for a causa (vala passa a ser uma das causas possíveis); regra 7 (P23) ajustada no mesmo sentido; a causa do reparo não é rotulada na imagem e vai para a planilha de vistoria (colunas `trecho_reparado` e `causa_reparo`). Decisão do Eliakim na F0-03 |
 | v2 | 2026-10-26 | Graus do Apêndice X1 da ASTM E2840-11 (propostas P13 a P30): três graus com fonte em `afundamento` (5, 13, 25 mm), `peca_faltante` (médio 2 a 9, alto 10 ou mais), `peca_quebrada`, `junta_aberta` (6, 10, 13 mm), `desconfinamento`, `desnivel` (3, 6, 10 mm) e `remendo` (antes sem grau); graus próprios da tag `trilha_roda` (6, 13, 25 mm); paralelepípedo com a escala da norma por extrapolação e 15 mm como referência de comparação (P14, opção B); regras gerais 6 a 11 (defeito dentro de remendo, vala com peças iguais, grau sem sombra nem chanfro, fronteira no grau menor, piso de cada grau, marca de campo); tag nova `marca_campo`; nota do erro tipográfico do médio de desconfinamento; unidade do PCI por classe; citação "E2840-11 (reaprovada em 2019)" no lugar de "R2019" |
 | v1 | 2026-10-20 | Alinhada à ASTM E2840: limites de grau baixo com fonte em afundamento, peça faltante, peça danificada, desconfinamento e desnível; tag `trilha_roda`; mapeamento completo; `junta_aberta` mantida como classe única |
 | v1 (rascunho) | 2026-10-19 | Proposta inicial com 8 classes e graus provisórios |

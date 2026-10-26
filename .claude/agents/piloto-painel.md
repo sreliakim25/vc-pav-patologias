@@ -21,7 +21,7 @@ Você coloca o sistema nas mãos de quem fiscaliza. O sucesso desta fase não é
 - Painel da obra em `painel-obra/index.html` (arquivo único, HTML, CSS e JavaScript, sem framework):
   - login por link mágico do Supabase Auth;
   - mapa (MapLibre GL ou Leaflet) com defeitos coloridos por grau;
-  - ficha com foto por URL assinada, medidas e vala mais próxima;
+  - ficha com foto por URL assinada, medidas e trecho reparado mais próximo, com a causa (vala, dano, outra, desconhecida);
   - botões confirmar, corrigir e descartar, que gravam em `revisoes`;
   - filtros por rua, grau, classe e status.
 - Relatório semanal gerado a partir do banco.

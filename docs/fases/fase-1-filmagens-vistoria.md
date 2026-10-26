@@ -6,7 +6,7 @@
 | **Duração estimada** | 2 a 3 semanas |
 | **Subagente principal** | [`coleta-campo`](../../.claude/agents/coleta-campo.md) |
 | **Subagentes de apoio** | [`redator-artigo`](../../.claude/agents/redator-artigo.md) |
-| **Entradas** | Kit testado, guia de rotulagem v2, ruas definidas, planilha de vistoria vazia |
+| **Entradas** | Kit testado, guia de rotulagem v2.1, ruas definidas, planilha de vistoria vazia |
 | **Saídas** | Quadros filtrados e anonimizados por rua e configuração, trilhas GPS, planilha de vistoria com 50 defeitos medidos e fotografados, scripts de `src/coleta/` e `src/anonimizacao/` |
 
 ---
@@ -63,7 +63,7 @@ Sem a medida de campo não há como saber se o sistema mede certo. E sem várias
 
 ### Passo 5. Fazer a vistoria de campo
 
-Os graus e as medidas seguem o [guia de rotulagem v2](../guias/guia-rotulagem.md), que usa o Apêndice X1 da ASTM E2840-11. As seções da norma citadas abaixo são as do apêndice X2 (orientações de vistoria), salvo indicação.
+Os graus e as medidas seguem o [guia de rotulagem v2.1](../guias/guia-rotulagem.md), que usa o Apêndice X1 da ASTM E2840-11. As seções da norma citadas abaixo são as do apêndice X2 (orientações de vistoria), salvo indicação.
 
 **Kit de medida (norma, P26):**
 
@@ -96,10 +96,11 @@ Para cada rua:
    - contar as **peças afetadas**;
    - anotar a **área afetada** em m² (`area_m2`), a partir do contorno marcado;
    - em remendo e peça faltante, anotar se o **conforto ao rodar** é afetado (`conforto_afetado`: sim ou não);
+   - anotar se o defeito está sobre um **trecho reparado** com peças iguais às originais (`trecho_reparado`) e, se estiver, a **causa do reparo** (`causa_reparo`); a causa só vai para a planilha, não para o rótulo (guia v2.1, regra 7);
    - anotar se a superfície está seca ou molhada (`superficie`);
    - fotografar com a régua graduada no chão;
    - anotar a coordenada (o GPS do celular serve para localizar, mas **não substitui a trena** na medida do defeito);
-   - dar o **grau de severidade** conforme o guia v2, **a partir da medida**, não da aparência.
+   - dar o **grau de severidade** conforme o guia v2.1, **a partir da medida**, não da aparência.
 4. **Não estimar profundidade pela sombra nem pela umidade:** sombra sob a régua de manhã cedo e no fim da tarde, pavimento molhado e mancha exageram o desnível aparente. Medir sempre (X2.7, X2.8). A menor diferença de cota mensurável é 3 mm (X2.1.1.4): abaixo disso, não registrar.
 5. **Uma linha da planilha por defeito e por grau:** defeitos sobrepostos na mesma área têm uma linha cada, no seu grau (X2.1.1.1); um mesmo defeito com trechos de graus diferentes tem uma linha por grau (X2.13). Defeito dentro de remendo não tem linha própria: ele só eleva o grau do remendo (X2.1.1.2).
 6. **Defeitos fora da rotulagem também entram na planilha**, na coluna `classe`: `elevacao` (altura sob a régua de 3 m apoiada na área não elevada, em `altura_elevacao_mm`, X1.6.3) e `fluencia` (desvio do centro da linha de 15 m até o alinhamento de juntas mais próximo, em `desvio_linha_mm`, X1.7.3), se forem medidos.
@@ -124,6 +125,8 @@ Para cada rua:
 | `desvio_linha_mm` | Só fluência, linha de 15 m |
 | `largura_junta_mm` | Largura real da junta, descontado o chanfro |
 | `conforto_afetado` | `sim` ou `nao` (remendo e peça faltante) |
+| `trecho_reparado` | `sim` ou `nao`: o defeito está sobre trecho já reparado com peças iguais às originais, qualquer que seja a causa (guia v2.1, tag `trecho_reparado`) |
+| `causa_reparo` | Só quando `trecho_reparado` é `sim`: `vala`, `dano`, `outra` ou `desconhecida` |
 
 > Segurança: use cones e colete, e nunca meça em faixa com tráfego sem sinalização.
 

@@ -15,7 +15,7 @@
 
 ### Passo 1. Escolher a obra
 
-1. Uma obra com **valas recentes** em intertravado ou paralelepípedo.
+1. Uma obra com **trechos reparados recentes** em intertravado ou paralelepípedo. A empresa repara todo dano de pavimento nas ruas, qualquer que seja a causa (vala, dano, outra, desconhecida); a vala é só uma delas.
 2. Combine com o engenheiro responsável o dia fixo da passada semanal e quem vai revisar os defeitos no painel.
 
 ### Passo 2. Revisar a segurança antes de subir dados reais
@@ -30,9 +30,9 @@ O subagente `seguranca-supabase` executa o checklist completo de [seguranca-supa
 
 **Nenhum dado real sobe antes deste passo concluído.**
 
-### Passo 3. Vistoria cautelar antes de cada vala
+### Passo 3. Vistoria cautelar antes de cada intervenção
 
-1. Antes de abrir cada nova vala, faça uma passada C1 no trecho.
+1. Antes de cada nova intervenção no pavimento (abrir uma vala ou iniciar um reparo), faça uma passada C1 no trecho.
 2. O pipeline registra os defeitos existentes como `pre_existente = true`, com data e coordenada.
 3. Esse registro protege contra cobrança por dano que já existia.
 
@@ -52,7 +52,7 @@ O subagente `piloto-painel` cria uma página única (HTML, CSS e JavaScript, sem
 
 1. **Login** por link mágico do Supabase Auth, só para usuários convidados.
 2. **Mapa** (MapLibre ou Leaflet) com os defeitos coloridos por grau.
-3. **Ficha do defeito**: foto (por URL assinada), classe, grau, medidas, vala mais próxima, data da primeira detecção.
+3. **Ficha do defeito**: foto (por URL assinada), classe, grau, medidas, trecho reparado mais próximo com a sua causa (vala, dano, outra, desconhecida), data da primeira detecção.
 4. **Botões de revisão**: confirmar, corrigir classe ou grau, descartar. Toda ação grava em `revisoes` com o usuário e a data.
 5. **Filtros**: rua, grau, classe, status de revisão, pré-existente ou não.
 
@@ -86,7 +86,7 @@ A página usa só a chave **publishable**; quem protege os dados é o RLS.
 |---|---|---|
 | F5-01 | Escolher a obra e combinar a rotina | Eliakim |
 | F5-02 | Checklist de segurança completo | `seguranca-supabase` |
-| F5-03 | Vistoria cautelar das valas novas | Eliakim |
+| F5-03 | Vistoria cautelar antes de cada intervenção (vala ou reparo) | Eliakim |
 | F5-04 | Módulo de envio ao Supabase | `piloto-painel` |
 | F5-05 | Painel da obra (login, mapa, ficha, revisão) | `piloto-painel` |
 | F5-06 | Relatório semanal | `piloto-painel` |

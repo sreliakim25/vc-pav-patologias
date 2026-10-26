@@ -518,7 +518,7 @@
           "ok": false
         },
         {
-          "item": "Defeito acompanhado da vala até a baixa",
+          "item": "Defeito acompanhado do trecho reparado até a baixa",
           "ok": false
         },
         {
@@ -535,7 +535,7 @@
           "sentido": "maior"
         },
         {
-          "nome": "Defeitos associados à vala ou pré-existentes",
+          "nome": "Defeitos associados a um trecho reparado ou pré-existentes",
           "atual": null,
           "meta": 100,
           "unidade": "%",
@@ -589,7 +589,7 @@
       "responsavel": "Eliakim",
       "prazo": "2026-10-24",
       "bloqueada": false,
-      "nota": "10 candidatas recebidas em 2026-10-26 (5 intertravado, 5 paralelepípedo), em loteamentos abertos, sem portaria; lista com códigos em dados/ruas-candidatas.md, fora do Git, porque o painel é público. Intertravado: peça retangular. Paralelepípedo: granítico, aproximadamente cúbico. Tráfego permite filmar devagar em todas. Faltam, por rua: extensão, vala recomposta e defeitos vistos."
+      "nota": "10 candidatas recebidas em 2026-10-26 (5 intertravado, 5 paralelepípedo), em loteamentos abertos, sem portaria; lista com códigos em dados/ruas-candidatas.md, fora do Git, porque o painel é público. Intertravado: peça retangular. Paralelepípedo: granítico, aproximadamente cúbico. Tráfego permite filmar devagar em todas. Faltam, por rua: extensão, trecho reparado (onde e causa) e defeitos vistos."
     },
     {
       "id": "F0-04",
@@ -1232,7 +1232,7 @@
     {
       "id": "F5-03",
       "fase": 5,
-      "titulo": "Vistoria cautelar das valas novas",
+      "titulo": "Vistoria cautelar antes de cada intervenção (vala ou reparo)",
       "passo": [
         3
       ],
@@ -1505,7 +1505,7 @@
     {
       "id": "F7-04",
       "fase": 7,
-      "titulo": "Tabelas de valas e recomposições",
+      "titulo": "Tabela de trechos reparados, com causa",
       "passo": [
         4
       ],
@@ -1518,7 +1518,7 @@
     {
       "id": "F7-05",
       "fase": 7,
-      "titulo": "Associação defeito e vala",
+      "titulo": "Associação defeito e trecho reparado",
       "passo": [
         4
       ],
@@ -1596,6 +1596,10 @@
   ],
   "ruas": [],
   "historico": [
+    {
+      "data": "2026-10-26",
+      "evento": "Decisão do Eliakim: 'vala recomposta' vira 'trecho reparado', com causa (vala, dano, outra, desconhecida), porque a maioria dos reparos não é por vala. Guia de rotulagem v2.1 (tag trecho_reparado), planilha com trecho_reparado e causa_reparo, fases 0, 5 e 7 ajustadas; F5-03, F7-04 e F7-05 renomeadas."
+    },
     {
       "data": "2026-10-26",
       "evento": "F0-03: paralelepípedo granítico aproximadamente cúbico; loteamentos abertos; tráfego permite filmar devagar. Faltam extensão, valas e defeitos por rua."

@@ -34,7 +34,7 @@ O artigo de referência (Freitas et al., 2024) mostrou que a **forma de coletar 
 1. Liste de 6 a 10 ruas candidatas que você conhece bem.
 2. Escolha **4 ruas**: 2 de intertravado e 2 de paralelepípedo.
 3. Garanta que, somadas, as ruas tenham:
-   - pelo menos uma recomposição de vala em cada tipo de pavimento;
+   - pelo menos um trecho reparado em cada tipo de pavimento (por vala ou por outro motivo);
    - defeitos de todas as classes principais (afundamento, peça faltante, junta aberta);
    - trechos em bom estado (o modelo precisa aprender o que é normal);
    - tráfego que permita filmar devagar e medir com segurança.
