@@ -14,6 +14,49 @@ Registro cronológico de tudo que tem valor para o artigo: decisões de método,
 
 ---
 
+### 2026-10-26 · Fase 0 · Comparação com a ASTM E2840 completa
+
+- **O que aconteceu:** segunda rodada da tarefa F0-02. Foi lida a ASTM E2840 completa (22 p.): corpo, Apêndice X1 (tipos e graus), X2 (orientações de vistoria) e X3 (exemplo de cálculo e curvas de dedução). Fonte única desta entrada: `docs/guias/comparacao-astm-e2840.md`, seção 7. Nada foi aplicado ao `guia-rotulagem.md` nem ao `classes.json`: o guia continua na v1 de 2026-10-20.
+- **Fatos da norma (com a seção citada na comparação):**
+  - **Cópia lida:** E2840-11, aprovada em 1º set. 2011, publicada em dez. 2011, DOI 10.1520/E2840-11. A cópia não traz a marca de reaprovação de 2019. Os metadados do PDF indicam arquivo gerado no Word em 2023, não a distribuição oficial da ASTM. Fonte: seção 7.1.
+  - **Graus oficiais:** os 11 defeitos têm graus baixo, médio e alto definidos no Apêndice X1. Com isso, a limitação "sem Apêndice X1" das entradas de 2026-10-19 e 2026-10-20 deixa de valer. Fonte: seção 7.2.
+  - **Curvas de dedução completas:** 11 curvas no Apêndice X3 (Fig. X3.1 a X3.11) e a curva de correção do valor total de dedução para q de 1 a 7 (Fig. X3.12). O procedimento de cálculo também está completo (9.2 a 9.5, 10.1, exemplo X3.1). Fonte: seção 7.7.
+  - **Precisão:** a norma declara que a exatidão e a repetibilidade do PCI para intertravado ainda não foram verificadas (4.2). Tolerâncias de 8.1: tipo certo em 95% dos casos, medida linear dentro de 10% e área dentro de 20%. Fonte: seções 4 e 7.5 (P29).
+  - **Erros encontrados na própria norma:** o exemplo X3.1 cita a "Figure X4.1", que não existe (é a X3.12); o exemplo registra a depressão como 15 ft² mas calcula a densidade com 5 ft²; o exemplo usa ft² para o desconfinamento, que é linear; o grau médio do desconfinamento traz a faixa invertida "3/8 to 1/4 in, 10 a 13 mm", sobreposta ao baixo; o rótulo interno das curvas 9 e 11 diz "PAVERS 109" e "PAVERS 111"; a unidade de amostra é 225 m² em 2.1.7 e 232 m² (2.500 ft²) no exemplo. Fonte: seções 7.2 e 7.7.
+  - **Escopo:** a norma vale só para peças de concreto conforme ASTM C936 (2.1.2). Nada sobre paralelepípedo. Fonte: seção 7.4.
+- **Fatos da conferência do manual ABCP (2022) contra a norma (seção 7.3):**
+  - Em todos os defeitos, o limite único que o manual chama de "aceitável" é o **teto do grau baixo** da norma. A norma não define "aceitável": o grau baixo já é defeito e desconta PCI.
+  - **Erro do manual em peças danificadas:** a norma diz "uma ou duas **fissuras** sem separação"; o manual escreveu "1 ou 2 **peças**". A origem registrada no guia v1 para `peca_quebrada` (tabela da entrada de 2026-10-20) herdou esse erro.
+  - **Remendo:** a regra de reparar com peças novas iguais às originais é recomendação do manual, não da norma. A norma gradua o remendo por estado e conforto e define remendo como reposição com material diferente (X1.10).
+- **Decisões anteriores mantidas (seção 7.4):** P2/P4 rejeitadas (`junta_aberta` única na rotulagem), P9 (tag `trilha_roda`), P10 (elevação fora da v1, agora reforçada: a causa típica na norma é congelamento do solo), P11 (fluência como medida derivada da grade, agora com limites de fonte oficial), P12 (`vegetacao`, sem equivalente na norma e fora do PCI).
+- **Propostas P13 a P30 (pendentes de decisão do Eliakim; nenhuma aplicada):**
+  - P13: três graus da norma em `afundamento` no intertravado (5, 13, 25 mm).
+  - P14: `afundamento` no paralelepípedo, opção A (manter 15 mm) ou B (extrapolar a escala da norma).
+  - P15: graus próprios da tag `trilha_roda` (6, 13, 25 mm) e escolha da curva X3.11 no PCI.
+  - P16: graus médio e alto de `peca_faltante` pela contagem da norma (2 a 9; 10 ou mais).
+  - P17: graus de `peca_quebrada` pela norma e correção da origem ("fissuras", não "peças").
+  - P18: faixas de `junta_aberta` pela norma (6, 10, 13 mm), largura real sem o chanfro.
+  - P19: profundidade da perda de rejunte na planilha de vistoria, para o defeito 8 no PCI.
+  - P20: origem ASTM X1.3 nos graus médio e alto de `desconfinamento` e registro do erro tipográfico.
+  - P21: graus de `desnivel` pela norma (3, 6, 10 mm), régua de 0,3 m.
+  - P22: três graus para `remendo`, por estado e conforto.
+  - P23: defeito dentro de remendo não é rotulado; vala com peças iguais não é remendo (tag `vala`).
+  - P24: código ASTM e unidade de quantidade do PCI no `classes.json`.
+  - P25: colunas novas no `modelo-vistoria.csv`.
+  - P26: método de campo e kit conforme o Apêndice X2.
+  - P27: tag nova `marca_campo` para giz ou tinta nas imagens.
+  - P28: grau por profundidade vem da medida de campo; sem medida, não usar sombra, chanfro ou umidade.
+  - P29: tolerâncias de 8.1 da norma como meta de aceitação da medição automática (fase 4).
+  - P30: citar a E2840-11 e conferir os números contra a cópia oficial da ASTM antes da redação final.
+- **Proposta (não decisão):** a comparação avalia que dá para calcular o PCI nas fases 5 e 7 digitalizando as curvas para uso interno, fora do repositório versionado. Fonte: seção 7.7.
+- **Hipóteses (não testadas):** aplicar as curvas da norma ao paralelepípedo é extrapolação e deve ser comparado com a avaliação de campo. Em Caruaru, elevações locais viriam de raízes, não de congelamento; a verificar na vistoria da fase 1. Fonte: seções 7.4 e 7.7.
+- **F0-11 (seção 7.8):** o limite de 15 mm do `afundamento` no paralelepípedo **continua sem fonte**, porque a norma só cobre peças de concreto. As faixas de "intertravado permeável" de `junta_aberta` e de `desconfinamento` passam a ter substituto na norma, se P18 e P20 forem aceitas.
+- **Impacto no artigo:**
+  - Seção 3.4 (classes e severidade): a tabela de graus pode citar o Apêndice X1 direto, e não mais o manual ABCP como fonte secundária. Até as decisões sobre P13 a P30, o texto descreve a v1 de 2026-10-20 e trata P13 a P30 como proposta. A origem de `peca_quebrada` não pode ser citada como "1 ou 2 peças".
+  - Seção 5 (discussão, reprodutibilidade): a norma declara que a precisão do PCI para intertravado não foi verificada (4.2). Isso motiva a medição automática e a dupla avaliação da fase 1. Se P29 for aceita, as tolerâncias de 8.1 viram a meta declarada da medição.
+  - Seção 5 (limitações): a cópia lida não é a distribuição oficial (P30); os erros da própria norma devem ser declarados onde afetarem o cálculo do PCI; o paralelepípedo segue sem fonte de limites.
+  - Referência: a entrada de `referencias.md` deve indicar E2840-11 e a pendência de conferência com a cópia oficial.
+
 ### 2026-10-20 · Fase 0 · Guia de rotulagem v1 fechado
 
 - **O que aconteceu:** o Eliakim decidiu as propostas P1 a P12 da comparação com a ASTM E2840 (tarefa F0-01). As decisões foram aplicadas em `docs/guias/guia-rotulagem.md`, agora v1 de 2026-10-20, e em `docs/guias/classes.json`. Fonte das decisões: `docs/guias/comparacao-astm-e2840.md`, seção 6. Esta entrada substitui o estado "proposta, não decisão" da subseção "Classes e severidade, versão 1" da entrada "Protocolo de coleta planejado", de mesma data.

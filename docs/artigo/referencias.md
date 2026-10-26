@@ -10,7 +10,7 @@ FREITAS, G. T. M.; NOBRE JÚNIOR, E. F.; ESPINDOLA, A. C. Avaliação da detecç
 
 GUERRIERI, M.; PARLA, G. Flexible and stone pavements distress detection and measurement by deep learning and low-cost detection devices. **Engineering Failure Analysis**, v. 141, 2022. Disponível em: <https://iris.unitn.it/handle/11572/352580>.
 
-ASTM INTERNATIONAL. **ASTM E2840-11(2019)**: Standard Practice for Pavement Condition Index Surveys for Interlocking Concrete Roads and Parking Lots. West Conshohocken: ASTM International, 2019. Consultada só a prévia de 3 páginas, sem o Apêndice X1.
+ASTM INTERNATIONAL. **ASTM E2840-11(2019)**: Standard Practice for Pavement Condition Index Surveys for Interlocking Concrete Roads and Parking Lots. West Conshohocken: ASTM International, 2019. Norma completa lida em 2026-10-26 (22 p.: corpo, Apêndices X1 a X3 e curvas de dedução); o texto lido é o da edição aprovada em 2011, que a reaprovação de 2019 não altera. Conferir os números citados contra a cópia oficial antes da redação final (ver comparacao-astm-e2840.md, seção 7, P30).
 
 SILVA, C. O. **Sistema de piso com peças de concreto**: pavimento intertravado: manual de desempenho. 1. ed. São Paulo: ABCP: BlocoBrasil, 2022. ISBN 978-85-87024-86-2.
 
