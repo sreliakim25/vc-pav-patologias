@@ -611,11 +611,11 @@
       "passo": [
         4
       ],
-      "coluna": "a_fazer",
+      "coluna": "fazendo",
       "responsavel": "coleta-campo",
       "prazo": "2026-10-29",
       "bloqueada": false,
-      "nota": ""
+      "nota": "Coleta de moto (Titan 160) com iPhone, sem câmera de ação (Eliakim, 2026-10-26). Proposta do coleta-campo: C1 com iPhone numa haste traseira a 1,20 m, olhando para trás a 55°, lente principal 4K30, obturador 1/2000 s, estabilização eletrônica desligada (0,52 mm/px; junta de 6 mm com cerca de 11 px); C2 no suporte do guidão a 1,20 m e 20°, Full HD. Para-lama descartado (sem suspensão, vibração). Aguarda: modelo do iPhone, segundo celular, alça traseira, suporte do guidão, apps. Docs das fases 0 e 1 só mudam após a decisão."
     },
     {
       "id": "F0-06",
@@ -1596,6 +1596,10 @@
   ],
   "ruas": [],
   "historico": [
+    {
+      "data": "2026-10-26",
+      "evento": "F0-05 em andamento: coleta passa a ser de moto com iPhone. Proposta de montagem C1 traseira e C2 no guidão aguardando decisão do Eliakim."
+    },
     {
       "data": "2026-10-26",
       "evento": "Decisão do Eliakim: 'vala recomposta' vira 'trecho reparado', com causa (vala, dano, outra, desconhecida), porque a maioria dos reparos não é por vala. Guia de rotulagem v2.1 (tag trecho_reparado), planilha com trecho_reparado e causa_reparo, fases 0, 5 e 7 ajustadas; F5-03, F7-04 e F7-05 renomeadas."
