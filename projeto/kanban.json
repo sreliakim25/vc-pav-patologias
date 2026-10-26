@@ -585,11 +585,11 @@
       "passo": [
         2
       ],
-      "coluna": "a_fazer",
+      "coluna": "fazendo",
       "responsavel": "Eliakim",
       "prazo": "2026-10-24",
       "bloqueada": false,
-      "nota": ""
+      "nota": "10 candidatas recebidas em 2026-10-26 (5 intertravado, 5 paralelepípedo, loteamentos entregues). Lista com códigos I1 a I5 e P1 a P5 em dados/ruas-candidatas.md, fora do Git: o painel é público. Faltam extensão, peça, vala e defeitos para escolher as 4."
     },
     {
       "id": "F0-04",
@@ -1596,6 +1596,10 @@
   ],
   "ruas": [],
   "historico": [
+    {
+      "data": "2026-10-26",
+      "evento": "F0-03 em andamento: 10 ruas candidatas recebidas (5 intertravado, 5 paralelepípedo). Nomes guardados só localmente; no kanban as ruas entram por código."
+    },
     {
       "data": "2026-10-26",
       "evento": "F0-02 feita: Eliakim aceitou P13 a P30 (P14 opção B). Guia de rotulagem v2 com graus da ASTM E2840 X1 no intertravado e extrapolação provisória no paralelepípedo; meta de medição da fase 4 pela tolerância da seção 8.1."
