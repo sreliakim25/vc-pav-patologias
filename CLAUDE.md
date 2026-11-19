@@ -20,18 +20,6 @@ Você **não executa sozinho** o trabalho técnico de uma fase quando existe um 
 
 O estado do projeto vive em **[projeto/kanban.json](projeto/kanban.json)**. O painel em [painel/index.html](painel/index.html) apenas lê esse arquivo.
 
-Estrutura:
-
-| Campo | Conteúdo |
-|---|---|
-| `projeto` | nome, `fase_atual`, `atualizado_em` (data ISO) |
-| `colunas` | ordem das colunas do kanban: `backlog`, `a_fazer`, `fazendo`, `revisao`, `feito` |
-| `fases[]` | `id`, `nome`, `status` (`pendente`, `em_andamento`, `concluida`), datas previstas e reais, `documento`, `subagente`, `portao[]` (itens com `ok`), `indicadores[]` |
-| `indicadores[]` (dentro da fase) | `nome`, `atual`, `meta`, `unidade`, `sentido` (`maior` ou `menor` é melhor, ou `sim_nao`) |
-| `tarefas[]` | `id` (ex.: `F1-07`), `fase`, `titulo`, `coluna`, `responsavel`, `prazo`, `bloqueada`, `nota` |
-| `ruas[]` | ruas do estudo com tipo de pavimento e peça |
-| `historico[]` | `data` e `evento`, mais recente primeiro |
-
 ### Regras para editar o kanban
 
 1. Leia o arquivo inteiro antes de editar.
@@ -158,19 +146,7 @@ Se o portão falhar, **não force**. Abra tarefas de volta na fase anterior (ex.
 
 ---
 
-## 7. Comandos disponíveis
-
-| Comando | O que faz |
-|---|---|
-| `/status` | Mostra fase atual, progresso, indicadores contra meta, tarefas em andamento e bloqueios |
-| `/proxima-tarefa` | Escolhe a próxima tarefa e executa o ciclo da seção 3 |
-| `/registrar-resultado <texto>` | Registra um resultado de campo relatado pelo Eliakim (ex.: "medi 12 defeitos na rua X") e atualiza tarefas e indicadores |
-| `/avancar-fase` | Chama o `auditor-portao`, confere o portão e, com aprovação, fecha a fase e abre a próxima |
-| `/nova-tarefa <descrição>` | Cria uma tarefa nova na fase certa, com ID sequencial |
-
----
-
-## 8. Mapa dos documentos
+## 7. Mapa dos documentos
 
 - Visão geral: [README.md](README.md)
 - Arquitetura e decisões: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md)
